@@ -1,0 +1,79 @@
+.timeline{
+    display:flex;
+    flex-direction:row;
+
+
+}
+.timeline{
+    margin:auto;
+}
+.diploma {
+    &_border {
+        &_left {
+            border-left: solid 3px red;
+            padding: 3em 0px 3em 0px;
+        }
+
+        &_right {
+            border-right: solid 3px red;
+            padding:3em 0px 3em 0px;
+            margin-right:0px;
+        }
+    }
+
+    &_block {
+        background-color: antiquewhite;
+        &_card {
+            padding: 2em;
+        }
+    }
+
+    &_timeline {
+
+        text-align: center;
+        display: flex;
+
+        &_year {
+            align-self: center;
+            padding:1.5em;
+            border-radius: 50%;
+            background-color: yellow;
+            font-size: 2em;
+        }
+    }
+}
+
+
+//timeline experience
+.experience{
+    &_year{
+        background-color:$container-color;
+        font-size:1.2em;
+        font-weight:bold;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        &_top{
+            border-top-left-radius:30px;
+            border-top-right-radius:30px;
+        }
+        &_bottom{
+            border-bottom-left-radius:30px;
+            border-bottom-right-radius:30px;
+        }
+    }
+    &_card{
+        margin-top:2em;
+        margin-bottom:2em;
+
+    }
+    &_alyzia_greeter{
+
+    }
+    &_alyzia_um{
+
+    }
+    &_royal_longueau{
+
+    }
+}

@@ -1,0 +1,61 @@
+body{
+        overflow-x:hidden;
+}
+
+header{
+    @include full-page;
+
+}
+section {
+    @include section-config;
+    padding-top:8vh;
+}
+
+
+.header{
+    height:90vh;
+    padding-top:35vh;
+    background-color:$header-color;
+}
+
+.competence{
+    display:grid;
+}
+
+.skill{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    margin-bottom:5%;
+}
+.progressbar {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    &_inline{
+        display:inline-block;
+        border:3px black solid;
+        width:100%;
+        border-radius:20px;
+        text-align:center;
+    }
+}
+#profil{
+    padding-top:20vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    background-color:lightslategrey;
+    height:90vh;
+}
+
+#skills{
+    background-color:skyblue;
+}
+
+.title{
+    justify-content:center;
+}
+#diploma{
+    background-color:$blue;
+}

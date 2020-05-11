@@ -1,0 +1,26 @@
+.navbar {
+    background-color: $grey;
+    height: 10vh;
+    width:100%;
+    &_minified{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-evenly;
+        background-color: $grey;
+        height:5vh;
+        width:100%;
+        position:fixed;
+        top:0px;
+        &_off{
+            display:none;
+        }
+    }
+}
+
+.logo{
+    height:8vh;
+    &_jquery{
+        height:5vh;
+    }
+}
+

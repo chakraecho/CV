@@ -1,0 +1,11 @@
+{
+  "name": "cv-online",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "sass": "sass --watch ./main.scss:./main.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

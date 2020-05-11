@@ -1,0 +1,17 @@
+$grey:#6A6A73;
+$header-color:#62C6F4;
+$container-color:#F3E88D;
+$blue: #19529C;
+@mixin full-page{
+    width:100%;
+    height:100vh;
+}
+@mixin section-config{
+    width:100%;
+    margin:auto;
+  
+}
+
+@mixin timeline-border {
+    border:red 3px solid;
+}

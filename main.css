@@ -1,0 +1,155 @@
+body {
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+}
+
+section {
+  width: 100%;
+  margin: auto;
+  padding-top: 8vh;
+}
+
+.header {
+  height: 90vh;
+  padding-top: 35vh;
+  background-color: #62C6F4;
+}
+
+.competence {
+  display: grid;
+}
+
+.skill {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+
+.progressbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.progressbar_inline {
+  display: inline-block;
+  border: 3px black solid;
+  width: 100%;
+  border-radius: 20px;
+  text-align: center;
+}
+
+#profil {
+  padding-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: lightslategrey;
+  height: 90vh;
+}
+
+#skills {
+  background-color: skyblue;
+}
+
+.title {
+  justify-content: center;
+}
+
+#diploma {
+  background-color: #19529C;
+}
+
+.navbar {
+  background-color: #6A6A73;
+  height: 10vh;
+  width: 100%;
+}
+.navbar_minified {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #6A6A73;
+  height: 5vh;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+}
+.navbar_minified_off {
+  display: none;
+}
+
+.logo {
+  height: 8vh;
+}
+.logo_jquery {
+  height: 5vh;
+}
+
+h3 {
+  margin-top: 4%;
+  margin-bottom: 8%;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: row;
+}
+
+.timeline {
+  margin: auto;
+}
+
+.diploma_border_left {
+  border-left: solid 3px red;
+  padding: 3em 0px 3em 0px;
+}
+.diploma_border_right {
+  border-right: solid 3px red;
+  padding: 3em 0px 3em 0px;
+  margin-right: 0px;
+}
+.diploma_block {
+  background-color: antiquewhite;
+}
+.diploma_block_card {
+  padding: 2em;
+}
+.diploma_timeline {
+  text-align: center;
+  display: flex;
+}
+.diploma_timeline_year {
+  align-self: center;
+  padding: 1.5em;
+  border-radius: 50%;
+  background-color: yellow;
+  font-size: 2em;
+}
+
+.experience_year {
+  background-color: #F3E88D;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.experience_year_top {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.experience_year_bottom {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.experience_card {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+/*# sourceMappingURL=main.css.map */
