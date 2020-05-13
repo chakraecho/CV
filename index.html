@@ -10,18 +10,6 @@
 <body>
 
     <header>
-        <div class="header">
-            <div class="row">
-                <div class="offset-1 col-12">
-                    <h2>Huang Julien</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="offset-2 col-12">
-                    <h3>En formation developpeur Web</h3>
-                </div>
-            </div>
-        </div>
         <div class="row">
             <div class="navbar">
                 <div class="col-lg-4">
@@ -48,38 +36,72 @@
             </div>
         </div>
 
-            <div class="navbar_minified navbar_minified_off">
-                <div class="navbar_button">
-                    <a href="#profil">Profil</a>
+        <div class="navbar_minified navbar_minified_off">
+            <div class="navbar_button">
+                <a href="#profil">Profil</a>
+            </div>
+            <div class="navbar_button">
+                <a href="#compentences">Compétences</a>
+            </div>
+            <div class="navbar_button">
+                <a href="#diplome">Diplôme</a>
+            </div>
+            <div class="navbar_button">
+                <a href="#experience">Expérience</a>
+            </div>
+            <div class="navbar_button">
+                <a href="#portfolio">Portfolio</a>
+            </div>
+            <div class="navbar_button">
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+        <div class="header">
+            <div class="header_front">
+                <div class="row">
+                    <div class=" offset-1 ">
+                        <h2>Huang Julien</h2>
+                    </div>
                 </div>
-                <div class="navbar_button">
-                    <a href="#compentences">Compétences</a>
-                </div>
-                <div class="navbar_button">
-                    <a href="#diplome">Diplôme</a>
-                </div>
-                <div class="navbar_button">
-                    <a href="#experience">Expérience</a>
-                </div>
-                <div class="navbar_button">
-                    <a href="#portfolio">Portfolio</a>
-                </div>
-                <div class="navbar_button">
-                    <a href="#contact">Contact</a>
+                <div class="row">
+                    <div class="offset-2">
+                        <h2>En formation Developpeur Web</h2>
+                    </div>
                 </div>
             </div>
-        
+           
+        </div>
+
     </header>
     <section id="profil" class="col-12">
         <div class="row">
-            <div class="text_block">Après une licence LEA Anglais-Chinois, je me tourne aujourdhui vers ma passion: l'informatique et les jeux vidéos.</div>
+            <h3>Profil</h3>
         </div>
         <div class="row">
-            <div class="text_block">Plongé dans le domaine de l'informatique depuis le plus jeune âge, j'ai acquis les bases de la programmations au collège 
-            avant de reprendre l'apprentissage du developpement web après l'université.</div>
-        </div>
-        <div class="row">
-            <div class="text_block">De mes expériences, j'aime le travail en équipe et me rendre serviable.</div>
+            <div class="container col-md-3 col-sm-12 profil_container">
+                    <div class="row">
+                        <img src="img/profil/gym.svg" alt="icon svg gym" class="profil_logo_icon"/>
+                    </div>
+                <div class="row profil_description">
+                    <p>pratique de la musculation</p>
+                </div>
+            </div>
+            <div class="container col-md-3 col-sm-12  profil_container">
+                <div class="row">
+                        <img src="img/profil/computer.svg" alt="icon svg computer and gaming" class="profil_logo_icon" />
+                </div>
+                <div class="row profil_description">
+                    <p> Passionné d'informatique et de jeux vidéo</p>
+                </div>
+            </div>
+            <div class="container col-md-3 col-sm-12 profil_container">
+                <div class="row ">
+                        <img src="img/profil/teamwork.svg" alt="icon svg teamwork" class="profil_logo_icon" />
+                </div>
+                <div class="row profil_description">
+                    <p>j'aime le travail en équipe</p>
+                </div>
+            </div>
         </div>
     </section>
     <section id="skills" class="section row">
@@ -146,16 +168,16 @@
                     </div>
                     <div class="skills_list">
                         <div class="row">
-                            <p>anglais : courant</p>
+                            <div class="col-3">Anglais:</div><div class="col-1 level level_left level_on"></div> <div class="col-1 level level_on"></div><div class="col-1 level level_on"></div><div class="col-1 level level_on"></div><div class="col-1 level level_on level_right"></div>
                         </div>
                         <div class="row">
-                            <p>chinois : langue maternelle</p>
+                            <div class="col-3">Chinois:</div><div class="col-1 level level_left level_on"></div> <div class="col-1 level level_on"></div><div class="col-1 level level_on"></div><div class="col-1 level level_on"></div><div class="col-1 level level_on level_right"></div>
                         </div>
                         <div class="row">
-                            <p>français : langue maternelle</p>
+                            <div class="col-3">Français:</div><div class="col-1 level level_left level_on"></div> <div class="col-1 level level_on"></div><div class="col-1 level level_on"></div><div class="col-1 level level_on"></div><div class="col-1 level level_on level_right"></div>
                         </div>
                         <div class="row">
-                            <p>allemand : niveau B2</p>
+                            <div class="col-3">Allemand:</div><div class="col-1 level level_left level_on"></div> <div class="col-1 level level_off"></div><div class="col-1 level level_off"></div><div class="col-1 level level_off"></div><div class="col-1 level level_off level_right"></div>
                         </div>
                     </div>
                 </div>
@@ -222,13 +244,13 @@
                     </div>
                     <div class="col-lg-6"></div>
                 </div>
-                <div class="timeline ">
-                    <div class="diploma_timeline offset-5 col-2">
+                <div class="timeline reverse">
+                    <div class="diploma_timeline offset-lg-5 col-2">
                         <div class="diploma_timeline_year">
                             2016
                         </div>
                     </div>
-                    <div class="diploma_border_right">
+                    <div class="diploma_border_right col-5">
                         <div class="diploma_block col-12">
                             <div class="diploma_block_card col-12">
                                 <div class="row">
@@ -273,7 +295,7 @@
     </section>
     <section id="experience">
             <div class="experience_alyzia_greeter row experience_block">
-                <div class="col-2 experience_year experience_year_top">
+                <div class="col-1 experience_year experience_year_top">
                     2019-2020
                 </div>
                 <div class="col-10 experience_card">
@@ -295,7 +317,7 @@
                 </div>
             </div>
                 <div class="experience_alyzia_um row">
-                    <div class="col-2 experience_year experience_block">
+                    <div class="col-1 experience_year experience_block">
                         2018
                     </div>
                     <div class="col-10 experience_card">
@@ -316,20 +338,42 @@
                     </div>
                 </div>
                     <div class="experience_royal_longueau row">
-                        <div class="col-2 experience_year experience_year_bottom">
+                        <div class="col-1 experience_year experience_year_bottom">
                             2016-2018
                         </div>
                         <div class="col-10 experience_card">
-
+                            <div class="row">
+                                <h4>Serveur (non-informatique !)</h4>
+                            </div>
+                            <div class="row">
+                                <div class="experience_card_description">
+                                    <em>contrat à durée indeterminée à Longueau</em>
+                                    <p>Il a bien fallu commencer quelque part dans le monde du travail, c'était donc un emploi à temps partiel durant mes études !</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
            
     </section>
     <section id="portfolio" class="section">
+        <div class="row">
+            <h3>Portfolio</h3>
+        </div>
+        <div class="row">
+            <div class="portfolio_container container">
+                <div class="row">
+                    <h4>axel-chemin.fr</h4>
+                </div>
+                <div class="portfolio_content">
+                    site en cours de construction !
+                </div>
+            </div>
+        </div>
 
     </section>
     <footer id="contact" class="section">
 
     </footer>
+    <script src="main.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 .navbar {
     background-color: $grey;
-    height: 10vh;
+    height: 10%;
     width:100%;
     &_minified{
         display:flex;
@@ -24,3 +24,28 @@
     }
 }
 
+.level {
+    display: inline-block;
+    border: 3px black solid;
+    width: 2.5em;
+    height: 1.2em;
+    margin:3px;
+
+    &_on {
+        background-color: springgreen;
+    }
+
+    &_off {
+        background-color: white;
+    }
+
+    &_right {
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+    }
+
+    &_left {
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+}

@@ -15,8 +15,18 @@ section {
 
 .header {
   height: 90vh;
-  padding-top: 35vh;
-  background-color: #62C6F4;
+  background-image: url("img/header_background.jpg");
+  display: flex;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header_front {
+  background-color: grey;
+  opacity: 0.7;
+  align-self: center;
+  width: 100%;
 }
 
 .competence {
@@ -45,11 +55,26 @@ section {
 
 #profil {
   padding-top: 20vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   background-color: lightslategrey;
-  height: 90vh;
+  min-height: 100vh;
+}
+
+.profil_container {
+  border-radius: 10px;
+  background-color: antiquewhite;
+  padding: 2% 2%;
+}
+.profil_logo_icon {
+  width: 30%;
+  margin: auto;
+}
+.profil_description {
+  justify-content: center;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.profil_description p {
+  text-align: center;
 }
 
 #skills {
@@ -66,7 +91,7 @@ section {
 
 .navbar {
   background-color: #6A6A73;
-  height: 10vh;
+  height: 10%;
   width: 100%;
 }
 .navbar_minified {
@@ -90,9 +115,41 @@ section {
   height: 5vh;
 }
 
+.level {
+  display: inline-block;
+  border: 3px black solid;
+  width: 2.5em;
+  height: 1.2em;
+  margin: 3px;
+}
+.level_on {
+  background-color: springgreen;
+}
+.level_off {
+  background-color: white;
+}
+.level_right {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.level_left {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 3em;
+}
+
 h3 {
   margin-top: 4%;
   margin-bottom: 8%;
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
 }
 
 .timeline {

@@ -12,11 +12,23 @@ section {
 }
 
 
-.header{
-    height:90vh;
-    padding-top:35vh;
-    background-color:$header-color;
+.header {
+    height: 90vh;
+    background-image: url('img/header_background.jpg');
+    display: flex;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &_front {
+        background-color: grey;
+        opacity: 0.7;
+        align-self: center;
+        width: 100%;
+    }
 }
+
 
 .competence{
     display:grid;
@@ -42,11 +54,31 @@ section {
 }
 #profil{
     padding-top:20vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-around;
     background-color:lightslategrey;
-    height:90vh;
+    min-height:100vh;
+}
+.profil {
+    &_container {
+        border-radius: 10px;
+        background-color: antiquewhite;
+        padding:2% 2%;
+    }
+
+    &_logo {
+        &_icon {
+            width:30%;
+            margin:auto;
+        }
+    }
+    &_description{
+       justify-content:center;
+       margin-top:1%;
+       margin-bottom:1%;
+       p{
+           text-align:center;
+       }
+    }
+
 }
 
 #skills{
@@ -58,4 +90,11 @@ section {
 }
 #diploma{
     background-color:$blue;
+}
+
+.portfolio{
+    &_container{
+
+    }
+
 }

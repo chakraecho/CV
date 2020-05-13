@@ -1,0 +1,10 @@
+//config for diploma section
+@media screen and (max-width:900px){
+	.container{
+		margin:0px;
+	}
+	.reverse{
+		display:flex;
+		flex-direction:row-reverse;
+	}
+}
