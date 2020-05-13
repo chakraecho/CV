@@ -14,7 +14,7 @@ section {
 }
 
 .header {
-  height: 90vh;
+  height: 100vh;
   background-image: url("img/header_background.jpg");
   display: flex;
   background-attachment: fixed;
@@ -24,7 +24,7 @@ section {
 }
 .header_front {
   background-color: grey;
-  opacity: 0.7;
+  opacity: 0.8;
   align-self: center;
   width: 100%;
 }
@@ -54,7 +54,7 @@ section {
 }
 
 #profil {
-  padding-top: 20vh;
+  padding-top: 10vh;
   background-color: lightslategrey;
   min-height: 100vh;
 }
@@ -89,10 +89,17 @@ section {
   background-color: #19529C;
 }
 
+#experience {
+  background-color: slategrey;
+}
+
 .navbar {
   background-color: #6A6A73;
   height: 10%;
   width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 .navbar_minified {
   display: flex;
@@ -188,25 +195,75 @@ h4 {
   font-size: 2em;
 }
 
-.experience_year {
-  background-color: #F3E88D;
-  font-size: 1.2em;
-  font-weight: bold;
+.wrapper {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.experience_year_top {
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+
+.experience_container {
+  overflow: hidden;
+  padding: 20px 10px;
+  position: relative;
+  margin: 0 auto;
+  width: 600px;
 }
-.experience_year_bottom {
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+
+.experience_container:before {
+  content: "";
+  width: 8px;
+  height: 100%;
+  background: #313131;
+  position: absolute;
+  left: 20px;
 }
-.experience_card {
-  margin-top: 2em;
-  margin-bottom: 2em;
+
+.job {
+  background: white;
+  padding: 20px;
+  margin: 20px 60px;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 8px;
+  position: relative;
+  -webkit-box-shadow: -5px 5px 41px -18px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -5px 5px 41px -18px rgba(0, 0, 0, 0.75);
+  box-shadow: -5px 5px 41px -18px rgba(0, 0, 0, 0.75);
+}
+
+.job h4 span {
+  font-size: 16px;
+  color: #6ab04c;
+  border: 2px solid #535c68;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.job:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: white;
+  left: -10px;
+  top: 50%;
+  transform: translatey(-50%) rotate(45deg);
+  position: absolute;
+  z-index: -1;
+  border: 2px solid #000;
+}
+
+.job:after {
+  content: "";
+  width: 32px;
+  height: 32px;
+  background: #badc58;
+  border-radius: 50%;
+  border: 4px solid #313131;
+  left: -65px;
+  top: 50%;
+  transform: translatey(-50%) rotate(45deg);
+  position: absolute;
 }
 
 /*# sourceMappingURL=main.css.map */

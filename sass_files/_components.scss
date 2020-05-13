@@ -2,6 +2,8 @@
     background-color: $grey;
     height: 10%;
     width:100%;
+    position:absolute;
+    top:0px;left:0px;
     &_minified{
         display:flex;
         flex-direction:row;
