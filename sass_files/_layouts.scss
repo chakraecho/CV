@@ -93,11 +93,24 @@ section {
 }
 #experience{
     background-color:slategrey;
+    padding-bottom:5%;
+    position:relative;
+    z-index:2;
 }
 
+#portfolio{
+    z-index:4;
+    background-color:royalblue;
+    position:relative;
+
+}
 .portfolio{
     &_container{
-
+        padding:2%;
+        background-color:antiquewhite;
+    }
+    row{
+        justify-content:space-around;
     }
 
 }
