@@ -11,6 +11,16 @@ section {
   width: 100%;
   margin: auto;
   padding-top: 8vh;
+  min-height: 100vh;
+}
+
+.section_title {
+  text-align: center;
+  width: 100%;
+  font-size: 3em;
+  font-weight: bold;
+  background-color: grey;
+  opacity: 0.9;
 }
 
 .header {
@@ -24,13 +34,49 @@ section {
 }
 .header_front {
   background-color: grey;
-  opacity: 0.8;
+  opacity: 0.9;
   align-self: center;
   width: 100%;
 }
 
+#profil {
+  padding-top: 10vh;
+  background-color: lightslategrey;
+  min-height: 100vh;
+}
+
+.profil_container {
+  border-radius: 10px;
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 1%;
+  margin: 1%;
+}
+.profil_logo_icon {
+  width: 25%;
+  margin: auto;
+}
+.profil_logo_icon_eft {
+  height: auto;
+  width: auto;
+}
+.profil_description {
+  justify-content: center;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.profil_description p {
+  text-align: center;
+}
+
 .competence {
   display: grid;
+}
+
+#skills {
+  background-color: #19529C;
 }
 
 .skill {
@@ -53,40 +99,12 @@ section {
   text-align: center;
 }
 
-#profil {
-  padding-top: 10vh;
-  background-color: lightslategrey;
-  min-height: 100vh;
-}
-
-.profil_container {
-  border-radius: 10px;
-  background-color: antiquewhite;
-  padding: 2% 2%;
-}
-.profil_logo_icon {
-  width: 30%;
-  margin: auto;
-}
-.profil_description {
-  justify-content: center;
-  margin-top: 1%;
-  margin-bottom: 1%;
-}
-.profil_description p {
-  text-align: center;
-}
-
-#skills {
-  background-color: skyblue;
-}
-
 .title {
   justify-content: center;
 }
 
 #diploma {
-  background-color: #19529C;
+  background-color: lightslategrey;
 }
 
 #experience {
@@ -98,20 +116,55 @@ section {
 
 #portfolio {
   z-index: 4;
-  background-color: royalblue;
+  background-color: #19529C;
   position: relative;
 }
 
-.portfolio_container {
-  padding: 2%;
-  background-color: antiquewhite;
+.portfolio {
+  background-image: url("img/portfolio/portfolio_background.jpg");
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.portfolio row {
+.portfolio_container {
+  margin: auto;
+}
+.portfolio_container h4 {
+  margin: auto;
+}
+.portfolio_container_description_image {
+  width: 20%;
+  height: auto;
+}
+
+.contact {
+  padding: 5px 0px;
+  background-color: lightslategrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact_logo_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.contact_logo_block {
+  height: 15vh;
+}
+.contact_logo_image {
+  height: 100%;
+}
+.contact_infos {
+  background-color: slategrey;
   justify-content: space-around;
 }
 
 .navbar {
-  background-color: #6A6A73;
+  background-color: lightslategrey;
   height: 10%;
   width: 100%;
   position: absolute;
@@ -122,7 +175,7 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: #6A6A73;
+  background-color: lightslategrey;
   height: 5vh;
   width: 100%;
   position: fixed;
@@ -133,10 +186,10 @@ section {
 }
 
 .logo {
-  height: 8vh;
+  height: 10vh;
 }
 .logo_jquery {
-  height: 5vh;
+  height: 7vh;
 }
 
 .level {

@@ -1,7 +1,8 @@
-$grey:#6A6A73;
+$grey:lightslategrey;
 $header-color:#62C6F4;
 $container-color:#F3E88D;
 $blue: #19529C;
+$green: springgreen;
 @mixin full-page{
     width:100%;
     height:100vh;
@@ -14,4 +15,11 @@ $blue: #19529C;
 
 @mixin timeline-border {
     border:red 3px solid;
+}
+
+@mixin parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

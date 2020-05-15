@@ -8,7 +8,19 @@ header{
 }
 section {
     @include section-config;
-    padding-top:8vh;
+    padding-top: 8vh;
+    min-height: 100vh;
+}
+.section {
+
+    &_title {
+        text-align: center;
+        width: 100%;
+        font-size: 3em;
+        font-weight: bold;
+        background-color: grey;
+        opacity: 0.9;
+    }
 }
 
 
@@ -16,22 +28,61 @@ section {
     height: 100vh;
     background-image: url('img/header_background.jpg');
     display: flex;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include parallax;
 
     &_front {
         background-color: grey;
-        opacity: 0.8;
+        opacity: 0.9;
         align-self: center;
         width: 100%;
     }
 }
 
+#profil {
+    padding-top: 10vh;
+    background-color: lightslategrey;
+    min-height: 100vh;
+}
+
+.profil {
+    &_container {
+        border-radius: 10px;
+        background-color: antiquewhite;
+        display:flex;
+        justify-content:space-around;
+        flex-direction:column;
+        padding:1%;
+        margin:1%;
+    }
+
+    &_logo {
+        &_icon {
+            width: 25%;
+            margin: auto;
+            &_eft{
+                height:auto;
+                width:auto;
+
+            }
+        }
+    }
+
+    &_description {
+        justify-content: center;
+        margin-top: 1%;
+        margin-bottom: 1%;
+
+        p {
+            text-align: center;
+        }
+    }
+}
 
 .competence{
     display:grid;
+}
+#skills {
+    background-color: $blue;
 }
 
 .skill{
@@ -52,44 +103,15 @@ section {
         text-align:center;
     }
 }
-#profil{
-    padding-top:10vh;
-    background-color:lightslategrey;
-    min-height:100vh;
-}
-.profil {
-    &_container {
-        border-radius: 10px;
-        background-color: antiquewhite;
-        padding:2% 2%;
-    }
 
-    &_logo {
-        &_icon {
-            width:30%;
-            margin:auto;
-        }
-    }
-    &_description{
-       justify-content:center;
-       margin-top:1%;
-       margin-bottom:1%;
-       p{
-           text-align:center;
-       }
-    }
 
-}
 
-#skills{
-    background-color:skyblue;
-}
 
 .title{
     justify-content:center;
 }
 #diploma{
-    background-color:$blue;
+    background-color:$grey;
 }
 #experience{
     background-color:slategrey;
@@ -100,17 +122,54 @@ section {
 
 #portfolio{
     z-index:4;
-    background-color:royalblue;
+    background-color:$blue;
     position:relative;
 
 }
 .portfolio{
+    background-image:url('img/portfolio/portfolio_background.jpg');
+    background-size:cover;
+    height:100vh;
+    @include parallax;
     &_container{
-        padding:2%;
-        background-color:antiquewhite;
-    }
-    row{
-        justify-content:space-around;
+        margin:auto;
+        h4{
+            margin:auto;    
+            }
+        &_description{
+            &_image{
+                width:20%;
+                height:auto;
+            }
+        }
     }
 
+}
+
+
+.contact {
+    padding: 5px 0px;
+    background-color: $grey;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    &_logo {
+        &_row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        &_block {
+            height: 15vh;
+        }
+
+        &_image {
+            height: 100%;
+        }
+    }
+    &_infos{
+        background-color:slategrey;   
+        justify-content:space-around;
+    }
 }

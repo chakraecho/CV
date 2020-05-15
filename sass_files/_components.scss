@@ -20,9 +20,9 @@
 }
 
 .logo{
-    height:8vh;
+    height:10vh;
     &_jquery{
-        height:5vh;
+        height:7vh;
     }
 }
 
@@ -34,7 +34,7 @@
     margin:3px;
 
     &_on {
-        background-color: springgreen;
+        background-color: $green;
     }
 
     &_off {
