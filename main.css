@@ -154,6 +154,7 @@ section {
 }
 .contact_logo_block {
   height: 15vh;
+  margin: auto;
 }
 .contact_logo_image {
   height: 100%;
