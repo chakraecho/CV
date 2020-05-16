@@ -266,13 +266,8 @@
     color: #f92534
 }
 
-@media only screen and (max-width:990px) and (min-width:768px) {
-    .main-timeline6 .timeline:after {
-        height: 80%
-    }
-}
 
-@media only screen and (max-width:767px) {
+@media only screen and (max-width:1000px) {
     .main-timeline6 .timeline:last-child, .main-timeline6 .timeline:nth-child(even), .main-timeline6 .timeline:nth-child(odd) {
         margin: 0
     }
