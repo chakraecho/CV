@@ -1,45 +1,74 @@
 //timeline diploma
 
-.timeline_block{
+.timeline{
+    &_block{
     display:flex;
     flex-direction:row;
-    margin:auto;
-
+    width:100%;
+    }
+    &_cache{
+        height:100%;
+        background-color:$blue;
+        width:10%;
+        position:relative;
+        z-index:2;
+    }
 }
 
 .diploma {
     &_border {
         &_left {
+            position: relative;
+            z-index: 1;
             border-left: solid 3px red;
             padding: 3em 0px 3em 0px;
         }
 
         &_right {
+            position: relative;
+            z-index: 1;
             border-right: solid 3px red;
-            padding:3em 0px 3em 0px;
-            margin-right:0px;
+            padding: 3em 0px 3em 0px;
+            margin-right: 0px;
         }
     }
 
     &_block {
         background-color: antiquewhite;
+
+        &_left {
+            border-bottom-right-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+
+        &_right {
+            border-bottom-left-radius: 50px;
+            border-top-left-radius: 50px;
+        }
+
         &_card {
             padding: 2em;
         }
     }
 
     &_timeline {
-
         text-align: center;
         display: flex;
 
         &_year {
             align-self: center;
-            padding:1.5em;
-            border-radius: 50%;
-            background-color: yellow;
+            padding: 0.5em;
             font-size: 2em;
         }
+    }
+
+    &_logo {
+        display: flex;
+    }
+
+    &_icon {
+        align-self: center;
+        width: 100%;
     }
 }
 

@@ -19,11 +19,23 @@
     }
 }
 
+.hexagon {
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    background: url("img/profil/profil.jpg") no-repeat;
+    background-size: cover;
+    margin: 10px auto;
+    height: 200px;
+    width: 200px;
+}
+
 .logo {
     width: 100%;
 
-    &_jquery {
-        width: 100%;
+    &_frameworks {
+        width: 70%;
+        &_sass{
+            width:50%;
+        }
     }
 }
 

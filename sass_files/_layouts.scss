@@ -1,5 +1,6 @@
 body{
     max-width:100%;
+ 
 }
 
 header{
@@ -40,7 +41,7 @@ section {
 
 #profil {
     padding-top: 10vh;
-    background-color: lightslategrey;
+    background-color: $blue;
 }
 
 .profil {
@@ -51,12 +52,10 @@ section {
         justify-content:space-around;
         flex-direction:column;
         margin:1%;
-        justify-self:center;
+        height:100%;
     }
     &_block{
-        height:100%;
-        min-width:200px;
-        margin:1%;
+        margin-top:1%;
     }
 
     &_logo {
@@ -84,7 +83,7 @@ section {
     display:grid;
 }
 #skills {
-    background-color: $blue;
+    background-color: $grey;
 }
 
 .skill{
@@ -113,10 +112,10 @@ section {
     justify-content:center;
 }
 #diploma{
-    background-color:$grey;
+    background-color:$blue;
 }
 #experience{
-    background-color:slategrey;
+    background-color:$grey;
     padding-bottom:5%;
     position:relative;
     z-index:2;
@@ -128,23 +127,28 @@ section {
     position:relative;
 
 }
-.portfolio{
-    background-image:url('img/portfolio/portfolio_background.jpg');
-    background-size:cover;
+.portfolio {
+    background-image: url('img/portfolio/portfolio_background.jpg');
+    background-size: cover;
     @include parallax;
-    &_container{
-        margin:auto;
-        h4{
-            margin:auto;    
-            }
-        &_description{
-            &_image{
-                width:20%;
-                height:auto;
-            }
+
+    &_container {
+        margin: auto;
+
+        h4 {
+            margin: auto;
         }
     }
 
+    &_description {
+        &_block {
+            width: 100%;
+        }
+
+        &_image {
+            width:100%;
+        }
+    }
 }
 
 
@@ -162,12 +166,12 @@ section {
         }
 
         &_block {
-            height: 15vh;
+            width:30%;
             margin:auto;
         }
 
         &_image {
-            height: 100%;
+            width: 100%;
         }
     }
     &_infos{
