@@ -1,3 +1,19 @@
+//backwards settings
+.profil_block{
+    opacity:0;
+}
+.progressbar_inline{
+    transform:scaleX(0%)
+}
+.diploma_block {
+    &_left {
+        transform: translateX(-100%)
+    }
+    &_right{
+        transform:translateX(100%)
+    }
+}
+
 @mixin animation_settings{
     animation:2s ease-in-out both;
 }
@@ -41,3 +57,43 @@
 }
 
 
+//diploma animations
+@keyframes diploma_slide_left{
+    0%{
+        transform:translateX(-100%);
+
+    }
+    85%{
+        transform:translateX(0%)
+    }
+    90%{
+        transform:translateX(-5%)
+    }
+    100%{
+        transform:translateX(0%)
+    }
+}
+.diploma_slide_left{
+    animation:diploma_slide_left 3s ease-in both;
+}
+
+@keyframes diploma_slide_right {
+    0% {
+        transform: translateX(100%);
+    }
+
+    85% {
+        transform: translateX(0%)
+    }
+
+    90% {
+        transform: translateX(5%)
+    }
+
+    100% {
+        transform: translateX(0%)
+    }
+}
+.diploma_slide_right {
+    animation: diploma_slide_right 3s ease-in both;
+}

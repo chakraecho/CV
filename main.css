@@ -248,6 +248,21 @@ h4 {
   text-align: center;
 }
 
+.profil_block {
+  opacity: 0;
+}
+
+.progressbar_inline {
+  transform: scaleX(0%);
+}
+
+.diploma_block_left {
+  transform: translateX(-100%);
+}
+.diploma_block_right {
+  transform: translateX(100%);
+}
+
 @keyframes showup_1 {
   from {
     transform: translateY(100px);
@@ -628,6 +643,42 @@ h4 {
   animation: 2s ease-in-out both;
   animation-name: progress_100;
   transform-origin: 0% 50%;
+}
+
+@keyframes diploma_slide_left {
+  0% {
+    transform: translateX(-100%);
+  }
+  85% {
+    transform: translateX(0%);
+  }
+  90% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.diploma_slide_left {
+  animation: diploma_slide_left 3s ease-in both;
+}
+
+@keyframes diploma_slide_right {
+  0% {
+    transform: translateX(100%);
+  }
+  85% {
+    transform: translateX(0%);
+  }
+  90% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.diploma_slide_right {
+  animation: diploma_slide_right 3s ease-in both;
 }
 
 .timeline_block {

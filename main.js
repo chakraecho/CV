@@ -37,6 +37,15 @@ window.addEventListener('scroll',function() {
 	if (isInViewport(document.querySelector('.progressbar_frameworks_55'))) {
 		$('.progressbar_frameworks_55').addClass('animation_progress_55')
 		$('.progressbar_frameworks_90').addClass('animation_progress_90')
-    }
+	}
+	if (isInViewport(document.querySelector('.diploma_animation_1'))) {
+		$('.diploma_animation_1').addClass('diploma_slide_left')
+	}
+	if (isInViewport(document.querySelector('.diploma_animation_2'))) {
+		$('.diploma_animation_2').addClass('diploma_slide_right')
+	}
+	if (isInViewport(document.querySelector('.diploma_animation_3'))) {
+		$('.diploma_animation_3').addClass('diploma_slide_left')
+	}
 })
 
