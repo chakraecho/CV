@@ -1,6 +1,26 @@
 @mixin animation_settings{
     animation:2s ease-in-out both;
-    transform-origin:0% 50%;
+}
+
+//profil_aniamtions
+@for $a from 1 through 6{
+    @keyframes showup_#{$a}{
+        from{
+            transform:translateY(100px);
+            opacity:0;
+        }
+        to{
+            transform:translateY(0px);
+            opacity:1;
+        }
+    }
+    .animation_showUp_#{$a}{
+        @include animation_settings;
+        transform-origin:bottom;
+        animation-name:showup_#{$a};
+        animation-delay: $a*100ms;
+    }
+    
 }
 
 //progress_animations
@@ -13,9 +33,10 @@
                                   transform: scaleX($i*5%);
                               }
     }
-    .animation_progress_#{$i*5}{
+    .animation_progress_#{$i*5} {
         @include animation_settings;
         animation-name: progress_#{$i*5};
+        transform-origin: 0% 50%;
     }
 }
 

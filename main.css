@@ -216,6 +216,7 @@ section {
   width: 2.5em;
   height: 1.2em;
   margin: 3px;
+  background-color: white;
 }
 .level_on {
   background-color: springgreen;
@@ -247,6 +248,108 @@ h4 {
   text-align: center;
 }
 
+@keyframes showup_1 {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.animation_showUp_1 {
+  animation: 2s ease-in-out both;
+  transform-origin: bottom;
+  animation-name: showup_1;
+  animation-delay: 100ms;
+}
+
+@keyframes showup_2 {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.animation_showUp_2 {
+  animation: 2s ease-in-out both;
+  transform-origin: bottom;
+  animation-name: showup_2;
+  animation-delay: 200ms;
+}
+
+@keyframes showup_3 {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.animation_showUp_3 {
+  animation: 2s ease-in-out both;
+  transform-origin: bottom;
+  animation-name: showup_3;
+  animation-delay: 300ms;
+}
+
+@keyframes showup_4 {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.animation_showUp_4 {
+  animation: 2s ease-in-out both;
+  transform-origin: bottom;
+  animation-name: showup_4;
+  animation-delay: 400ms;
+}
+
+@keyframes showup_5 {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.animation_showUp_5 {
+  animation: 2s ease-in-out both;
+  transform-origin: bottom;
+  animation-name: showup_5;
+  animation-delay: 500ms;
+}
+
+@keyframes showup_6 {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.animation_showUp_6 {
+  animation: 2s ease-in-out both;
+  transform-origin: bottom;
+  animation-name: showup_6;
+  animation-delay: 600ms;
+}
+
 @keyframes progress_5 {
   from {
     transform: scaleX(0%);
@@ -257,8 +360,8 @@ h4 {
 }
 .animation_progress_5 {
   animation: 2s ease-in-out both;
-  transform-origin: 0% 50%;
   animation-name: progress_5;
+  transform-origin: 0% 50%;
 }
 
 @keyframes progress_10 {
@@ -271,8 +374,8 @@ h4 {
 }
 .animation_progress_10 {
   animation: 2s ease-in-out both;
-  transform-origin: 0% 50%;
   animation-name: progress_10;
+  transform-origin: 0% 50%;
 }
 
 @keyframes progress_15 {
@@ -285,8 +388,8 @@ h4 {
 }
 .animation_progress_15 {
   animation: 2s ease-in-out both;
-  transform-origin: 0% 50%;
   animation-name: progress_15;
+  transform-origin: 0% 50%;
 }
 
 @keyframes progress_20 {
@@ -299,8 +402,8 @@ h4 {
 }
 .animation_progress_20 {
   animation: 2s ease-in-out both;
-  transform-origin: 0% 50%;
   animation-name: progress_20;
+  transform-origin: 0% 50%;
 }
 
 @keyframes progress_25 {
@@ -313,8 +416,8 @@ h4 {
 }
 .animation_progress_25 {
   animation: 2s ease-in-out both;
-  transform-origin: 0% 50%;
   animation-name: progress_25;
+  transform-origin: 0% 50%;
 }
 
 @keyframes progress_30 {
@@ -327,8 +430,8 @@ h4 {
 }
 .animation_progress_30 {
   animation: 2s ease-in-out both;
-  transform-origin: 0% 50%;
   animation-name: progress_30;
+  transform-origin: 0% 50%;
 }
 
 @keyframes progress_35 {
@@ -341,8 +444,8 @@ h4 {
 }
 .animation_progress_35 {
   animation: 2s ease-in-out both;
-  transform-origin: 0% 50%;
   animation-name: progress_35;
+  transform-origin: 0% 50%;
 }
 
 @keyframes progress_40 {
@@ -355,8 +458,8 @@ h4 {
 }
 .animation_progress_40 {
   animation: 2s ease-in-out both;
-  transform-origin: 0% 50%;
   animation-name: progress_40;
+  transform-origin: 0% 50%;
 }
 
 @keyframes progress_45 {
@@ -369,8 +472,8 @@ h4 {
 }
 .animation_progress_45 {
   animation: 2s ease-in-out both;
-  transform-origin: 0% 50%;
   animation-name: progress_45;
+  transform-origin: 0% 50%;
 }
 
 @keyframes progress_50 {
@@ -383,8 +486,8 @@ h4 {
 }
 .animation_progress_50 {
   animation: 2s ease-in-out both;
-  transform-origin: 0% 50%;
   animation-name: progress_50;
+  transform-origin: 0% 50%;
 }
 
 @keyframes progress_55 {
@@ -397,8 +500,8 @@ h4 {
 }
 .animation_progress_55 {
   animation: 2s ease-in-out both;
-  transform-origin: 0% 50%;
   animation-name: progress_55;
+  transform-origin: 0% 50%;
 }
 
 @keyframes progress_60 {
@@ -411,8 +514,8 @@ h4 {
 }
 .animation_progress_60 {
   animation: 2s ease-in-out both;
-  transform-origin: 0% 50%;
   animation-name: progress_60;
+  transform-origin: 0% 50%;
 }
 
 @keyframes progress_65 {
@@ -425,8 +528,8 @@ h4 {
 }
 .animation_progress_65 {
   animation: 2s ease-in-out both;
-  transform-origin: 0% 50%;
   animation-name: progress_65;
+  transform-origin: 0% 50%;
 }
 
 @keyframes progress_70 {
@@ -439,8 +542,8 @@ h4 {
 }
 .animation_progress_70 {
   animation: 2s ease-in-out both;
-  transform-origin: 0% 50%;
   animation-name: progress_70;
+  transform-origin: 0% 50%;
 }
 
 @keyframes progress_75 {
@@ -453,8 +556,8 @@ h4 {
 }
 .animation_progress_75 {
   animation: 2s ease-in-out both;
-  transform-origin: 0% 50%;
   animation-name: progress_75;
+  transform-origin: 0% 50%;
 }
 
 @keyframes progress_80 {
@@ -467,8 +570,8 @@ h4 {
 }
 .animation_progress_80 {
   animation: 2s ease-in-out both;
-  transform-origin: 0% 50%;
   animation-name: progress_80;
+  transform-origin: 0% 50%;
 }
 
 @keyframes progress_85 {
@@ -481,8 +584,8 @@ h4 {
 }
 .animation_progress_85 {
   animation: 2s ease-in-out both;
-  transform-origin: 0% 50%;
   animation-name: progress_85;
+  transform-origin: 0% 50%;
 }
 
 @keyframes progress_90 {
@@ -495,8 +598,8 @@ h4 {
 }
 .animation_progress_90 {
   animation: 2s ease-in-out both;
-  transform-origin: 0% 50%;
   animation-name: progress_90;
+  transform-origin: 0% 50%;
 }
 
 @keyframes progress_95 {
@@ -509,8 +612,8 @@ h4 {
 }
 .animation_progress_95 {
   animation: 2s ease-in-out both;
-  transform-origin: 0% 50%;
   animation-name: progress_95;
+  transform-origin: 0% 50%;
 }
 
 @keyframes progress_100 {
@@ -523,8 +626,8 @@ h4 {
 }
 .animation_progress_100 {
   animation: 2s ease-in-out both;
-  transform-origin: 0% 50%;
   animation-name: progress_100;
+  transform-origin: 0% 50%;
 }
 
 .timeline_block {
