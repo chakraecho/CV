@@ -7,6 +7,11 @@ var isInViewport = function (elem) {
 	);
 };
 
-//listener for navbar
-let navbar = document.querySelector(".navbar")
-let navbarMinified = document.querySelector(".navbar_minified")
+//animations
+
+$('window').on("scroll", function () {
+	if (isInViewport(document.querySelector('.progressbar_inline')){
+		$('.progressbar_inline').addClass('animation_progress_90')
+
+	}
+})

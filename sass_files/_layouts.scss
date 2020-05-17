@@ -93,89 +93,97 @@ section {
     margin-bottom:5%;
 }
 .progressbar {
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    &_inline{
-        display:inline-block;
-        border:3px black solid;
-        width:100%;
-        border-radius:20px;
-        text-align:center;
+    justify-content: center;
+    border: 3px black solid;
+    border-radius: 5px;
+    height: 40px;
+    align-self: center;
+    padding:0px;
+
+    > span {
+        display: block;
+        height: 100%;
+        border-radius:5px;
+        background-color: rgb(43,194,83);
+        background-image: linear-gradient( center bottom, rgb(43,194,83) 37%, rgb(84,240,84) 69% );
     }
 }
 
 
 
 
-.title{
-    justify-content:center;
-}
-#diploma{
-    background-color:$blue;
-}
-#experience{
-    background-color:$grey;
-    padding-bottom:5%;
-    position:relative;
-    z-index:2;
-}
+    .title {
+        justify-content: center;
+    }
 
-#portfolio{
-    z-index:4;
-    background-color:$blue;
-    position:relative;
+    #diploma {
+        background-color: $blue;
+    }
 
-}
-.portfolio {
-    background-image: url('img/portfolio/portfolio_background.jpg');
-    background-size: cover;
-    @include parallax;
+    #experience {
+        background-color: $grey;
+        padding-bottom: 5%;
+        position: relative;
+        z-index: 2;
+    }
 
-    &_container {
-        margin: auto;
+    #portfolio {
+        z-index: 4;
+        background-color: $blue;
+        position: relative;
+    }
 
-        h4 {
+    .portfolio {
+        background-image: url('img/portfolio/portfolio_background.jpg');
+        background-size: cover;
+        @include parallax;
+
+        &_container {
             margin: auto;
+
+            h4 {
+                margin: auto;
+            }
+        }
+
+        &_description {
+            &_block {
+                width: 100%;
+            }
+
+            &_image {
+                width: 100%;
+            }
         }
     }
 
-    &_description {
-        &_block {
-            width: 100%;
+
+    .contact {
+        padding: 5px 0px;
+        background-color: $grey;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &_logo {
+            &_row {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            &_block {
+                width: 30%;
+                margin: auto;
+            }
+
+            &_image {
+                width: 100%;
+            }
         }
 
-        &_image {
-            width:100%;
-        }
-    }
-}
-
-
-.contact {
-    padding: 5px 0px;
-    background-color: $grey;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    &_logo {
-        &_row {
-            display: flex;
-            flex-direction: row;
+        &_infos {
+            background-color: slategrey;
             justify-content: space-around;
         }
-
-        &_block {
-            width:30%;
-            margin:auto;
-        }
-
-        &_image {
-            width: 100%;
-        }
     }
-    &_infos{
-        background-color:slategrey;   
-        justify-content:space-around;
-    }
-}

@@ -1,0 +1,22 @@
+@mixin animation_settings{
+    animation:2s ease-in-out both;
+    transform-origin:0% 50%;
+}
+
+//progress_animations
+@for $i from 1 through 20{
+    @keyframes progress_#{$i*5}{
+                              from{
+                                  transform:scaleX(0%);
+                              }
+                              to{
+                                  transform: scaleX($i*5%);
+                              }
+    }
+    .animation_progress_#{$i*5}{
+        @include animation_settings;
+        animation-name: progress_#{$i*5};
+    }
+}
+
+

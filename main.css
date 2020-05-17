@@ -88,16 +88,19 @@ section {
 }
 
 .progressbar {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-}
-.progressbar_inline {
-  display: inline-block;
   border: 3px black solid;
-  width: 100%;
-  border-radius: 20px;
-  text-align: center;
+  border-radius: 5px;
+  height: 40px;
+  align-self: center;
+  padding: 0px;
+}
+.progressbar > span {
+  display: block;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #2bc253;
+  background-image: linear-gradient(center bottom, #2bc253 37%, #54f054 69%);
 }
 
 .title {
@@ -242,6 +245,286 @@ h3 {
 
 h4 {
   text-align: center;
+}
+
+@keyframes progress_5 {
+  from {
+    transform: scaleX(0%);
+  }
+  to {
+    transform: scaleX(5%);
+  }
+}
+.animation_progress_5 {
+  animation: 2s ease-in-out both;
+  transform-origin: 0% 50%;
+  animation-name: progress_5;
+}
+
+@keyframes progress_10 {
+  from {
+    transform: scaleX(0%);
+  }
+  to {
+    transform: scaleX(10%);
+  }
+}
+.animation_progress_10 {
+  animation: 2s ease-in-out both;
+  transform-origin: 0% 50%;
+  animation-name: progress_10;
+}
+
+@keyframes progress_15 {
+  from {
+    transform: scaleX(0%);
+  }
+  to {
+    transform: scaleX(15%);
+  }
+}
+.animation_progress_15 {
+  animation: 2s ease-in-out both;
+  transform-origin: 0% 50%;
+  animation-name: progress_15;
+}
+
+@keyframes progress_20 {
+  from {
+    transform: scaleX(0%);
+  }
+  to {
+    transform: scaleX(20%);
+  }
+}
+.animation_progress_20 {
+  animation: 2s ease-in-out both;
+  transform-origin: 0% 50%;
+  animation-name: progress_20;
+}
+
+@keyframes progress_25 {
+  from {
+    transform: scaleX(0%);
+  }
+  to {
+    transform: scaleX(25%);
+  }
+}
+.animation_progress_25 {
+  animation: 2s ease-in-out both;
+  transform-origin: 0% 50%;
+  animation-name: progress_25;
+}
+
+@keyframes progress_30 {
+  from {
+    transform: scaleX(0%);
+  }
+  to {
+    transform: scaleX(30%);
+  }
+}
+.animation_progress_30 {
+  animation: 2s ease-in-out both;
+  transform-origin: 0% 50%;
+  animation-name: progress_30;
+}
+
+@keyframes progress_35 {
+  from {
+    transform: scaleX(0%);
+  }
+  to {
+    transform: scaleX(35%);
+  }
+}
+.animation_progress_35 {
+  animation: 2s ease-in-out both;
+  transform-origin: 0% 50%;
+  animation-name: progress_35;
+}
+
+@keyframes progress_40 {
+  from {
+    transform: scaleX(0%);
+  }
+  to {
+    transform: scaleX(40%);
+  }
+}
+.animation_progress_40 {
+  animation: 2s ease-in-out both;
+  transform-origin: 0% 50%;
+  animation-name: progress_40;
+}
+
+@keyframes progress_45 {
+  from {
+    transform: scaleX(0%);
+  }
+  to {
+    transform: scaleX(45%);
+  }
+}
+.animation_progress_45 {
+  animation: 2s ease-in-out both;
+  transform-origin: 0% 50%;
+  animation-name: progress_45;
+}
+
+@keyframes progress_50 {
+  from {
+    transform: scaleX(0%);
+  }
+  to {
+    transform: scaleX(50%);
+  }
+}
+.animation_progress_50 {
+  animation: 2s ease-in-out both;
+  transform-origin: 0% 50%;
+  animation-name: progress_50;
+}
+
+@keyframes progress_55 {
+  from {
+    transform: scaleX(0%);
+  }
+  to {
+    transform: scaleX(55%);
+  }
+}
+.animation_progress_55 {
+  animation: 2s ease-in-out both;
+  transform-origin: 0% 50%;
+  animation-name: progress_55;
+}
+
+@keyframes progress_60 {
+  from {
+    transform: scaleX(0%);
+  }
+  to {
+    transform: scaleX(60%);
+  }
+}
+.animation_progress_60 {
+  animation: 2s ease-in-out both;
+  transform-origin: 0% 50%;
+  animation-name: progress_60;
+}
+
+@keyframes progress_65 {
+  from {
+    transform: scaleX(0%);
+  }
+  to {
+    transform: scaleX(65%);
+  }
+}
+.animation_progress_65 {
+  animation: 2s ease-in-out both;
+  transform-origin: 0% 50%;
+  animation-name: progress_65;
+}
+
+@keyframes progress_70 {
+  from {
+    transform: scaleX(0%);
+  }
+  to {
+    transform: scaleX(70%);
+  }
+}
+.animation_progress_70 {
+  animation: 2s ease-in-out both;
+  transform-origin: 0% 50%;
+  animation-name: progress_70;
+}
+
+@keyframes progress_75 {
+  from {
+    transform: scaleX(0%);
+  }
+  to {
+    transform: scaleX(75%);
+  }
+}
+.animation_progress_75 {
+  animation: 2s ease-in-out both;
+  transform-origin: 0% 50%;
+  animation-name: progress_75;
+}
+
+@keyframes progress_80 {
+  from {
+    transform: scaleX(0%);
+  }
+  to {
+    transform: scaleX(80%);
+  }
+}
+.animation_progress_80 {
+  animation: 2s ease-in-out both;
+  transform-origin: 0% 50%;
+  animation-name: progress_80;
+}
+
+@keyframes progress_85 {
+  from {
+    transform: scaleX(0%);
+  }
+  to {
+    transform: scaleX(85%);
+  }
+}
+.animation_progress_85 {
+  animation: 2s ease-in-out both;
+  transform-origin: 0% 50%;
+  animation-name: progress_85;
+}
+
+@keyframes progress_90 {
+  from {
+    transform: scaleX(0%);
+  }
+  to {
+    transform: scaleX(90%);
+  }
+}
+.animation_progress_90 {
+  animation: 2s ease-in-out both;
+  transform-origin: 0% 50%;
+  animation-name: progress_90;
+}
+
+@keyframes progress_95 {
+  from {
+    transform: scaleX(0%);
+  }
+  to {
+    transform: scaleX(95%);
+  }
+}
+.animation_progress_95 {
+  animation: 2s ease-in-out both;
+  transform-origin: 0% 50%;
+  animation-name: progress_95;
+}
+
+@keyframes progress_100 {
+  from {
+    transform: scaleX(0%);
+  }
+  to {
+    transform: scaleX(100%);
+  }
+}
+.animation_progress_100 {
+  animation: 2s ease-in-out both;
+  transform-origin: 0% 50%;
+  animation-name: progress_100;
 }
 
 .timeline_block {
