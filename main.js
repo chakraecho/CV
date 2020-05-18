@@ -18,6 +18,8 @@ window.addEventListener('scroll', function () {
 	}
 })
 
+
+
 //skills animations
 window.addEventListener('scroll',function() {
 	if (isInViewport(document.querySelector('.progressbar_90'))) {

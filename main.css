@@ -1,6 +1,6 @@
 body {
   max-width: 100%;
-  overflow-x: hidden;
+  overflow: visible;
 }
 
 header {
@@ -247,6 +247,16 @@ h3 {
 
 h4 {
   text-align: center;
+}
+
+#profil p {
+  color: antiquewhite;
+}
+#profil h4 {
+  color: antiquewhite;
+}
+#profil .profil_container p {
+  color: black;
 }
 
 .profil_block {
