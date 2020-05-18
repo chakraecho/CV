@@ -1,6 +1,6 @@
 body{
     max-width:100%;
-    overflow:visible;
+    overflow-x: hidden;
 }
 
 header{
@@ -137,7 +137,8 @@ section {
     .portfolio {
         background-image: url('img/portfolio/portfolio_background.jpg');
         background-size: cover;
-        @include parallax;
+        @include parallax;;
+        height:100vh;
 
         &_container {
             margin: auto;
@@ -165,7 +166,13 @@ section {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
+        &_CV{
+            height:10vh;
+            width:100%;
+            background-color:antiquewhite;
+            border:5px solid;
+            border-color:dodgerblue;
+        }
         &_logo {
             &_row {
                 display: flex;
@@ -186,5 +193,8 @@ section {
         &_infos {
             background-color: slategrey;
             justify-content: space-around;
+            &_lign{
+                justify-content:space-around
+            }
         }
     }
