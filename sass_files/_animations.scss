@@ -3,7 +3,7 @@
     opacity:0;
 }
 .progressbar_inline{
-    transform:scaleX(0%)
+    transform:scaleX(0)
 }
 .diploma_block {
     &_left {
@@ -17,6 +17,17 @@
 
 //profil_aniamtions
 @for $a from 1 through 6{
+    @keyframes showup_#{$a} {
+        from {
+            transform: translateY(100px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
     @keyframes showup_#{$a}{
         from{
             transform:translateY(100px);
@@ -39,10 +50,10 @@
 @for $i from 1 through 20{
     @keyframes progress_#{$i*5}{
                               from{
-                                  transform:scaleX(0%);
+                                  transform:scaleX(0);
                               }
                               to{
-                                  transform: scaleX($i*5%);
+                                  transform: scaleX($i*0.05);
                               }
     }
     .animation_progress_#{$i*5} {
