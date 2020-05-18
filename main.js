@@ -20,7 +20,7 @@ window.addEventListener('scroll', function () {
 
 //skills animations
 window.addEventListener('scroll',function() {
-	if (isInViewport(document.querySelector('.progressbar_inline'))) {
+	if (isInViewport(document.querySelector('.progressbar_90'))) {
 		$('.progressbar_90').addClass('animation_progress_90')
 		$('.progressbar_95').addClass('animation_progress_95')
 		$('.progressbar_85').addClass('animation_progress_85')

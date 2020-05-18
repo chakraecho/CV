@@ -26,6 +26,8 @@ section {
 .header {
   height: 100vh;
   background-image: url("img/header_background.jpg");
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-attachment: fixed;
   background-position: center;
@@ -35,7 +37,8 @@ section {
 .header_front {
   background-color: grey;
   opacity: 0.9;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   width: 100%;
 }
 
@@ -47,9 +50,15 @@ section {
 .profil_container {
   border-radius: 10px;
   background-color: antiquewhite;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 1%;
   height: 100%;
 }
@@ -64,7 +73,9 @@ section {
   width: 100%;
 }
 .profil_description {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 1%;
   margin-bottom: 1%;
 }
@@ -81,18 +92,28 @@ section {
 }
 
 .skill {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 5%;
 }
 
 .progressbar {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: 3px black solid;
   border-radius: 5px;
   height: 40px;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   padding: 0px;
 }
 .progressbar > span {
@@ -100,11 +121,15 @@ section {
   height: 100%;
   border-radius: 5px;
   background-color: #2bc253;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(bottom, center), color-stop(37%, #2bc253), color-stop(69%, #54f054));
+  background-image: -o-linear-gradient(center bottom, #2bc253 37%, #54f054 69%);
   background-image: linear-gradient(center bottom, #2bc253 37%, #54f054 69%);
 }
 
 .title {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #diploma {
@@ -148,14 +173,27 @@ section {
 .contact {
   padding: 5px 0px;
   background-color: lightslategrey;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .contact_logo_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 .contact_logo_block {
   width: 30%;
@@ -166,7 +204,8 @@ section {
 }
 .contact_infos {
   background-color: slategrey;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .navbar {
@@ -178,9 +217,16 @@ section {
   left: 0px;
 }
 .navbar_minified {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   background-color: lightslategrey;
   height: 5vh;
   width: 100%;
@@ -192,7 +238,8 @@ section {
 }
 
 .hexagon {
-  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   background: url("img/profil/profil.jpg") no-repeat;
   background-size: cover;
   margin: 10px auto;
@@ -253,437 +300,904 @@ h4 {
 }
 
 .progressbar_inline {
-  transform: scaleX(0%);
+  -webkit-transform: scaleX(0%);
+      -ms-transform: scaleX(0%);
+          transform: scaleX(0%);
 }
 
 .diploma_block_left {
-  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 .diploma_block_right {
-  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+@-webkit-keyframes showup_1 {
+  from {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 @keyframes showup_1 {
   from {
-    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
     opacity: 0;
   }
   to {
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
     opacity: 1;
   }
 }
 .animation_showUp_1 {
-  animation: 2s ease-in-out both;
-  transform-origin: bottom;
-  animation-name: showup_1;
-  animation-delay: 100ms;
+  -webkit-animation: showup_1 2s ease-in-out both;
+          animation: showup_1 2s ease-in-out both;
+  -webkit-transform-origin: bottom;
+      -ms-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+@-webkit-keyframes showup_2 {
+  from {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 @keyframes showup_2 {
   from {
-    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
     opacity: 0;
   }
   to {
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
     opacity: 1;
   }
 }
 .animation_showUp_2 {
-  animation: 2s ease-in-out both;
-  transform-origin: bottom;
-  animation-name: showup_2;
-  animation-delay: 200ms;
+  -webkit-animation: showup_2 2s ease-in-out both;
+          animation: showup_2 2s ease-in-out both;
+  -webkit-transform-origin: bottom;
+      -ms-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+@-webkit-keyframes showup_3 {
+  from {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 @keyframes showup_3 {
   from {
-    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
     opacity: 0;
   }
   to {
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
     opacity: 1;
   }
 }
 .animation_showUp_3 {
-  animation: 2s ease-in-out both;
-  transform-origin: bottom;
-  animation-name: showup_3;
-  animation-delay: 300ms;
+  -webkit-animation: showup_3 2s ease-in-out both;
+          animation: showup_3 2s ease-in-out both;
+  -webkit-transform-origin: bottom;
+      -ms-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+@-webkit-keyframes showup_4 {
+  from {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 @keyframes showup_4 {
   from {
-    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
     opacity: 0;
   }
   to {
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
     opacity: 1;
   }
 }
 .animation_showUp_4 {
-  animation: 2s ease-in-out both;
-  transform-origin: bottom;
-  animation-name: showup_4;
-  animation-delay: 400ms;
+  -webkit-animation: showup_4 2s ease-in-out both;
+          animation: showup_4 2s ease-in-out both;
+  -webkit-transform-origin: bottom;
+      -ms-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+
+@-webkit-keyframes showup_5 {
+  from {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 @keyframes showup_5 {
   from {
-    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
     opacity: 0;
   }
   to {
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
     opacity: 1;
   }
 }
 .animation_showUp_5 {
-  animation: 2s ease-in-out both;
-  transform-origin: bottom;
-  animation-name: showup_5;
-  animation-delay: 500ms;
+  -webkit-animation: showup_5 2s ease-in-out both;
+          animation: showup_5 2s ease-in-out both;
+  -webkit-transform-origin: bottom;
+      -ms-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+@-webkit-keyframes showup_6 {
+  from {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 @keyframes showup_6 {
   from {
-    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
     opacity: 0;
   }
   to {
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
     opacity: 1;
   }
 }
 .animation_showUp_6 {
-  animation: 2s ease-in-out both;
-  transform-origin: bottom;
-  animation-name: showup_6;
-  animation-delay: 600ms;
+  -webkit-animation: showup_6 2s ease-in-out both;
+          animation: showup_6 2s ease-in-out both;
+  -webkit-transform-origin: bottom;
+      -ms-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+
+@-webkit-keyframes progress_5 {
+  from {
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
+  }
+  to {
+    -webkit-transform: scaleX(5%);
+            transform: scaleX(5%);
+  }
 }
 
 @keyframes progress_5 {
   from {
-    transform: scaleX(0%);
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
   }
   to {
-    transform: scaleX(5%);
+    -webkit-transform: scaleX(5%);
+            transform: scaleX(5%);
   }
 }
 .animation_progress_5 {
-  animation: 2s ease-in-out both;
-  animation-name: progress_5;
-  transform-origin: 0% 50%;
+  -webkit-animation: progress_5 2s ease-in-out both;
+          animation: progress_5 2s ease-in-out both;
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+@-webkit-keyframes progress_10 {
+  from {
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
+  }
+  to {
+    -webkit-transform: scaleX(10%);
+            transform: scaleX(10%);
+  }
 }
 
 @keyframes progress_10 {
   from {
-    transform: scaleX(0%);
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
   }
   to {
-    transform: scaleX(10%);
+    -webkit-transform: scaleX(10%);
+            transform: scaleX(10%);
   }
 }
 .animation_progress_10 {
-  animation: 2s ease-in-out both;
-  animation-name: progress_10;
-  transform-origin: 0% 50%;
+  -webkit-animation: progress_10 2s ease-in-out both;
+          animation: progress_10 2s ease-in-out both;
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+@-webkit-keyframes progress_15 {
+  from {
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
+  }
+  to {
+    -webkit-transform: scaleX(15%);
+            transform: scaleX(15%);
+  }
 }
 
 @keyframes progress_15 {
   from {
-    transform: scaleX(0%);
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
   }
   to {
-    transform: scaleX(15%);
+    -webkit-transform: scaleX(15%);
+            transform: scaleX(15%);
   }
 }
 .animation_progress_15 {
-  animation: 2s ease-in-out both;
-  animation-name: progress_15;
-  transform-origin: 0% 50%;
+  -webkit-animation: progress_15 2s ease-in-out both;
+          animation: progress_15 2s ease-in-out both;
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+@-webkit-keyframes progress_20 {
+  from {
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
+  }
+  to {
+    -webkit-transform: scaleX(20%);
+            transform: scaleX(20%);
+  }
 }
 
 @keyframes progress_20 {
   from {
-    transform: scaleX(0%);
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
   }
   to {
-    transform: scaleX(20%);
+    -webkit-transform: scaleX(20%);
+            transform: scaleX(20%);
   }
 }
 .animation_progress_20 {
-  animation: 2s ease-in-out both;
-  animation-name: progress_20;
-  transform-origin: 0% 50%;
+  -webkit-animation: progress_20 2s ease-in-out both;
+          animation: progress_20 2s ease-in-out both;
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+@-webkit-keyframes progress_25 {
+  from {
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
+  }
+  to {
+    -webkit-transform: scaleX(25%);
+            transform: scaleX(25%);
+  }
 }
 
 @keyframes progress_25 {
   from {
-    transform: scaleX(0%);
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
   }
   to {
-    transform: scaleX(25%);
+    -webkit-transform: scaleX(25%);
+            transform: scaleX(25%);
   }
 }
 .animation_progress_25 {
-  animation: 2s ease-in-out both;
-  animation-name: progress_25;
-  transform-origin: 0% 50%;
+  -webkit-animation: progress_25 2s ease-in-out both;
+          animation: progress_25 2s ease-in-out both;
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+@-webkit-keyframes progress_30 {
+  from {
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
+  }
+  to {
+    -webkit-transform: scaleX(30%);
+            transform: scaleX(30%);
+  }
 }
 
 @keyframes progress_30 {
   from {
-    transform: scaleX(0%);
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
   }
   to {
-    transform: scaleX(30%);
+    -webkit-transform: scaleX(30%);
+            transform: scaleX(30%);
   }
 }
 .animation_progress_30 {
-  animation: 2s ease-in-out both;
-  animation-name: progress_30;
-  transform-origin: 0% 50%;
+  -webkit-animation: progress_30 2s ease-in-out both;
+          animation: progress_30 2s ease-in-out both;
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+@-webkit-keyframes progress_35 {
+  from {
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
+  }
+  to {
+    -webkit-transform: scaleX(35%);
+            transform: scaleX(35%);
+  }
 }
 
 @keyframes progress_35 {
   from {
-    transform: scaleX(0%);
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
   }
   to {
-    transform: scaleX(35%);
+    -webkit-transform: scaleX(35%);
+            transform: scaleX(35%);
   }
 }
 .animation_progress_35 {
-  animation: 2s ease-in-out both;
-  animation-name: progress_35;
-  transform-origin: 0% 50%;
+  -webkit-animation: progress_35 2s ease-in-out both;
+          animation: progress_35 2s ease-in-out both;
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+@-webkit-keyframes progress_40 {
+  from {
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
+  }
+  to {
+    -webkit-transform: scaleX(40%);
+            transform: scaleX(40%);
+  }
 }
 
 @keyframes progress_40 {
   from {
-    transform: scaleX(0%);
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
   }
   to {
-    transform: scaleX(40%);
+    -webkit-transform: scaleX(40%);
+            transform: scaleX(40%);
   }
 }
 .animation_progress_40 {
-  animation: 2s ease-in-out both;
-  animation-name: progress_40;
-  transform-origin: 0% 50%;
+  -webkit-animation: progress_40 2s ease-in-out both;
+          animation: progress_40 2s ease-in-out both;
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+@-webkit-keyframes progress_45 {
+  from {
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
+  }
+  to {
+    -webkit-transform: scaleX(45%);
+            transform: scaleX(45%);
+  }
 }
 
 @keyframes progress_45 {
   from {
-    transform: scaleX(0%);
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
   }
   to {
-    transform: scaleX(45%);
+    -webkit-transform: scaleX(45%);
+            transform: scaleX(45%);
   }
 }
 .animation_progress_45 {
-  animation: 2s ease-in-out both;
-  animation-name: progress_45;
-  transform-origin: 0% 50%;
+  -webkit-animation: progress_45 2s ease-in-out both;
+          animation: progress_45 2s ease-in-out both;
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+@-webkit-keyframes progress_50 {
+  from {
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
+  }
+  to {
+    -webkit-transform: scaleX(50%);
+            transform: scaleX(50%);
+  }
 }
 
 @keyframes progress_50 {
   from {
-    transform: scaleX(0%);
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
   }
   to {
-    transform: scaleX(50%);
+    -webkit-transform: scaleX(50%);
+            transform: scaleX(50%);
   }
 }
 .animation_progress_50 {
-  animation: 2s ease-in-out both;
-  animation-name: progress_50;
-  transform-origin: 0% 50%;
+  -webkit-animation: progress_50 2s ease-in-out both;
+          animation: progress_50 2s ease-in-out both;
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+@-webkit-keyframes progress_55 {
+  from {
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
+  }
+  to {
+    -webkit-transform: scaleX(55%);
+            transform: scaleX(55%);
+  }
 }
 
 @keyframes progress_55 {
   from {
-    transform: scaleX(0%);
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
   }
   to {
-    transform: scaleX(55%);
+    -webkit-transform: scaleX(55%);
+            transform: scaleX(55%);
   }
 }
 .animation_progress_55 {
-  animation: 2s ease-in-out both;
-  animation-name: progress_55;
-  transform-origin: 0% 50%;
+  -webkit-animation: progress_55 2s ease-in-out both;
+          animation: progress_55 2s ease-in-out both;
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+@-webkit-keyframes progress_60 {
+  from {
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
+  }
+  to {
+    -webkit-transform: scaleX(60%);
+            transform: scaleX(60%);
+  }
 }
 
 @keyframes progress_60 {
   from {
-    transform: scaleX(0%);
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
   }
   to {
-    transform: scaleX(60%);
+    -webkit-transform: scaleX(60%);
+            transform: scaleX(60%);
   }
 }
 .animation_progress_60 {
-  animation: 2s ease-in-out both;
-  animation-name: progress_60;
-  transform-origin: 0% 50%;
+  -webkit-animation: progress_60 2s ease-in-out both;
+          animation: progress_60 2s ease-in-out both;
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+@-webkit-keyframes progress_65 {
+  from {
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
+  }
+  to {
+    -webkit-transform: scaleX(65%);
+            transform: scaleX(65%);
+  }
 }
 
 @keyframes progress_65 {
   from {
-    transform: scaleX(0%);
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
   }
   to {
-    transform: scaleX(65%);
+    -webkit-transform: scaleX(65%);
+            transform: scaleX(65%);
   }
 }
 .animation_progress_65 {
-  animation: 2s ease-in-out both;
-  animation-name: progress_65;
-  transform-origin: 0% 50%;
+  -webkit-animation: progress_65 2s ease-in-out both;
+          animation: progress_65 2s ease-in-out both;
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+@-webkit-keyframes progress_70 {
+  from {
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
+  }
+  to {
+    -webkit-transform: scaleX(70%);
+            transform: scaleX(70%);
+  }
 }
 
 @keyframes progress_70 {
   from {
-    transform: scaleX(0%);
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
   }
   to {
-    transform: scaleX(70%);
+    -webkit-transform: scaleX(70%);
+            transform: scaleX(70%);
   }
 }
 .animation_progress_70 {
-  animation: 2s ease-in-out both;
-  animation-name: progress_70;
-  transform-origin: 0% 50%;
+  -webkit-animation: progress_70 2s ease-in-out both;
+          animation: progress_70 2s ease-in-out both;
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+@-webkit-keyframes progress_75 {
+  from {
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
+  }
+  to {
+    -webkit-transform: scaleX(75%);
+            transform: scaleX(75%);
+  }
 }
 
 @keyframes progress_75 {
   from {
-    transform: scaleX(0%);
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
   }
   to {
-    transform: scaleX(75%);
+    -webkit-transform: scaleX(75%);
+            transform: scaleX(75%);
   }
 }
 .animation_progress_75 {
-  animation: 2s ease-in-out both;
-  animation-name: progress_75;
-  transform-origin: 0% 50%;
+  -webkit-animation: progress_75 2s ease-in-out both;
+          animation: progress_75 2s ease-in-out both;
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+@-webkit-keyframes progress_80 {
+  from {
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
+  }
+  to {
+    -webkit-transform: scaleX(80%);
+            transform: scaleX(80%);
+  }
 }
 
 @keyframes progress_80 {
   from {
-    transform: scaleX(0%);
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
   }
   to {
-    transform: scaleX(80%);
+    -webkit-transform: scaleX(80%);
+            transform: scaleX(80%);
   }
 }
 .animation_progress_80 {
-  animation: 2s ease-in-out both;
-  animation-name: progress_80;
-  transform-origin: 0% 50%;
+  -webkit-animation: progress_80 2s ease-in-out both;
+          animation: progress_80 2s ease-in-out both;
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+@-webkit-keyframes progress_85 {
+  from {
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
+  }
+  to {
+    -webkit-transform: scaleX(85%);
+            transform: scaleX(85%);
+  }
 }
 
 @keyframes progress_85 {
   from {
-    transform: scaleX(0%);
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
   }
   to {
-    transform: scaleX(85%);
+    -webkit-transform: scaleX(85%);
+            transform: scaleX(85%);
   }
 }
 .animation_progress_85 {
-  animation: 2s ease-in-out both;
-  animation-name: progress_85;
-  transform-origin: 0% 50%;
+  -webkit-animation: progress_85 2s ease-in-out both;
+          animation: progress_85 2s ease-in-out both;
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+@-webkit-keyframes progress_90 {
+  from {
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
+  }
+  to {
+    -webkit-transform: scaleX(90%);
+            transform: scaleX(90%);
+  }
 }
 
 @keyframes progress_90 {
   from {
-    transform: scaleX(0%);
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
   }
   to {
-    transform: scaleX(90%);
+    -webkit-transform: scaleX(90%);
+            transform: scaleX(90%);
   }
 }
 .animation_progress_90 {
-  animation: 2s ease-in-out both;
-  animation-name: progress_90;
-  transform-origin: 0% 50%;
+  -webkit-animation: progress_90 2s ease-in-out both;
+          animation: progress_90 2s ease-in-out both;
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+@-webkit-keyframes progress_95 {
+  from {
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
+  }
+  to {
+    -webkit-transform: scaleX(95%);
+            transform: scaleX(95%);
+  }
 }
 
 @keyframes progress_95 {
   from {
-    transform: scaleX(0%);
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
   }
   to {
-    transform: scaleX(95%);
+    -webkit-transform: scaleX(95%);
+            transform: scaleX(95%);
   }
 }
 .animation_progress_95 {
-  animation: 2s ease-in-out both;
-  animation-name: progress_95;
-  transform-origin: 0% 50%;
+  -webkit-animation: progress_95 2s ease-in-out both;
+          animation: progress_95 2s ease-in-out both;
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+@-webkit-keyframes progress_100 {
+  from {
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
+  }
+  to {
+    -webkit-transform: scaleX(100%);
+            transform: scaleX(100%);
+  }
 }
 
 @keyframes progress_100 {
   from {
-    transform: scaleX(0%);
+    -webkit-transform: scaleX(0%);
+            transform: scaleX(0%);
   }
   to {
-    transform: scaleX(100%);
+    -webkit-transform: scaleX(100%);
+            transform: scaleX(100%);
   }
 }
 .animation_progress_100 {
-  animation: 2s ease-in-out both;
-  animation-name: progress_100;
-  transform-origin: 0% 50%;
+  -webkit-animation: progress_100 2s ease-in-out both;
+          animation: progress_100 2s ease-in-out both;
+  -webkit-transform-origin: 0% 50%;
+      -ms-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+@-webkit-keyframes diploma_slide_left {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  85% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  90% {
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
 }
 
 @keyframes diploma_slide_left {
   0% {
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
   85% {
-    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
   90% {
-    transform: translateX(-5%);
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
   }
   100% {
-    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
 }
 .diploma_slide_left {
-  animation: diploma_slide_left 3s ease-in both;
+  -webkit-animation: diploma_slide_left 3s ease-in both;
+          animation: diploma_slide_left 3s ease-in both;
+}
+
+@-webkit-keyframes diploma_slide_right {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  85% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  90% {
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
 }
 
 @keyframes diploma_slide_right {
   0% {
-    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
   85% {
-    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
   90% {
-    transform: translateX(5%);
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
   }
   100% {
-    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
 }
 .diploma_slide_right {
-  animation: diploma_slide_right 3s ease-in both;
+  -webkit-animation: diploma_slide_right 3s ease-in both;
+          animation: diploma_slide_right 3s ease-in both;
 }
 
 .timeline_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 100%;
 }
 .timeline_cache {
@@ -723,18 +1237,24 @@ h4 {
 }
 .diploma_timeline {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .diploma_timeline_year {
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   padding: 0.5em;
   font-size: 2em;
 }
 .diploma_logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .diploma_icon {
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   width: 100%;
 }
 
@@ -763,7 +1283,9 @@ h4 {
   background: #9f005d;
   left: 0;
   z-index: -1;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .main-timeline6 .timeline:after {
@@ -780,7 +1302,8 @@ h4 {
   margin-right: 15px;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+          box-shadow: 3px 3px 5px 6px #ccc;
 }
 
 .main-timeline6 .timeline-content:after, .main-timeline6 .timeline-content:before {
@@ -793,12 +1316,16 @@ h4 {
   top: 50%;
   left: -13px;
   z-index: 1;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .main-timeline6 .timeline-content:after {
   left: 30%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .main-timeline6 .year {
@@ -850,7 +1377,9 @@ h4 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .main-timeline6 .title {
@@ -1005,4 +1534,4 @@ h4 {
   }
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3NfZmlsZXMvX2xheW91dHMuc2NzcyIsIi4uL21haW4uY3NzIiwiLi4vc2Fzc19maWxlcy9fdmFyaWFibGVzLnNjc3MiLCIuLi9zYXNzX2ZpbGVzL19jb21wb25lbnRzLnNjc3MiLCIuLi9zYXNzX2ZpbGVzL19iYXNlLnNjc3MiLCIuLi9zYXNzX2ZpbGVzL19hbmltYXRpb25zLnNjc3MiLCIuLi9zYXNzX2ZpbGVzL190aW1lbGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksZUFBQTtBQ0NKOztBREdBO0VFQ0ksV0FBQTtFQUNBLGFBQUE7QURBSjs7QURFQTtFRUNJLFdBQUE7RUFDQSxZQUFBO0VGQUEsZ0JBQUE7RUFDQSxtQkFBQTtBQ0VKOztBREVJO0VBQ0ksa0JBQUE7RUFDQSxXQUFBO0VBQ0EsY0FBQTtFQUNBLGlCQUFBO0VBQ0Esc0JBQUE7RUFDQSxZQUFBO0FDQ1I7O0FESUE7RUFDSSxhQUFBO0VBQ0Esa0RBQUE7RUFDQSxvQkFBQTtFQUFBLG9CQUFBO0VBQUEsYUFBQTtFRVZBLDRCQUFBO0VBQ0EsMkJBQUE7RUFDQSw0QkFBQTtFQUNBLHNCQUFBO0FEVUo7QURBSTtFQUNJLHNCQUFBO0VBQ0EsWUFBQTtFQUNBLDJCQUFBO01BQUEsa0JBQUE7RUFDQSxXQUFBO0FDRVI7O0FERUE7RUFDSSxpQkFBQTtFQUNBLHlCRXhDRztBRHlDUDs7QURHSTtFQUNJLG1CQUFBO0VBQ0EsOEJBQUE7RUFDQSxvQkFBQTtFQUFBLG9CQUFBO0VBQUEsYUFBQTtFQUNBLHlCQUFBO01BQUEsNkJBQUE7RUFDQSw0QkFBQTtFQUFBLDZCQUFBO01BQUEsMEJBQUE7VUFBQSxzQkFBQTtFQUNBLFVBQUE7RUFDQSxZQUFBO0FDQVI7QURFSTtFQUNJLGNBQUE7QUNBUjtBRElRO0VBQ0ksVUFBQTtFQUNBLFlBQUE7QUNGWjtBREdZO0VBQ0ksV0FBQTtBQ0RoQjtBRE1JO0VBQ0ksd0JBQUE7TUFBQSxxQkFBQTtVQUFBLHVCQUFBO0VBQ0EsY0FB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LGVBQUE7RUFDQSxnQkFBQTtFQUNBLFdBQUE7RUFDQSxlQUFBO0FMNm5CSjs7QUsxbkJBO0VBQ0ksZUFBQTtFQUNBLFdBQUE7RUFDQSxTQUFBO0FMNm5CSjs7QUsxbkJBO0VBQ0ksVUFBQTtFQUNBLFFBQUE7QUw2bkJKOztBSzFuQkE7RUFDSSxXQUFBO0FMNm5CSjs7QUsxbkJBO0VBQ0ksV0FBQTtFQUNBLHNCQUFBO0VBQ0Esa0JBQUE7QUw2bkJKOztBSzFuQkE7RUFDSSxVQUFBO0VBQ0EsWUFBQTtBTDZuQko7O0FLMW5CQTtFQUNJLFVBQUE7RUFDQSxtQkFBQTtBTDZuQko7O0FLMW5CQTtFQUNJLG1CQUFBO0VBQ0EsY0FBQTtBTDZuQko7O0FLMW5CQTtFQUNJLDZCQUFBO0VBQ0EsbUJBQUE7RUFDQSw4QkFBQTtBTDZuQko7O0FLMW5CQTtFQUNJLFlBQUE7RUFDQSxnQ0FBQTtFQUNBLGtDQUFBO0VBQ0EsV0FBQTtFQUNBLE9BQUE7QUw2bkJKOztBSzFuQkE7RUFDSSxnQkFBQTtFQUNBLHFDQUFBO0FMNm5CSjs7QUsxbkJBO0VBQ0ksaUJBQUE7QUw2bkJKOztBS3huQkE7RUFDSSxtQkFBQTtBTDJuQko7O0FLeG5CQTtFQUNJLFNBQUE7QUwybkJKOztBS3huQkE7RUFDSSxtQkFBQTtBTDJuQko7O0FLeG5CQTtFQUNJLG1CQUFBO0FMMm5CSjs7QUt4bkJBO0VBQ0ksMEJBQUE7QUwybkJKOztBS3huQkE7RUFDSSxjQUFBO0FMMm5CSjs7QUt4bkJBO0VBQ0ksbUJBQUE7QUwybkJKOztBS3huQkE7RUFDSSwyQkFBQTtBTDJuQko7O0FLeG5CQTtFQUNJLGNBQUE7QUwybkJKOztBS3ZuQkE7RUFDSTtJQUNJLFNBQUE7RUwwbkJOOztFS3ZuQkU7SUFDSSxVQUFBO0lBQ0EsbUNBQUE7RUwwbkJOOztFS3ZuQkU7SUFDSSxhQUFBO0VMMG5CTjs7RUt2bkJFO0lBQ0ksV0FBQTtJQUNBLFdBQUE7SUFDQSxzQkFBQTtJQUNBLFNBQUE7RUwwbkJOOztFS3ZuQkU7SUFDSSw2QkFBQTtJQUNBLG1CQUFBO0lBQ0EsOEJBQUE7RUwwbkJOOztFS3ZuQkU7SUFDSSxZQUFBO0lBQ0EsK0JBQUE7SUFDQSxrQ0FBQTtJQUNBLFFBQUE7SUFDQSxVQUFBO0VMMG5CTjs7RUt2bkJFO0lBQ0ksZ0JBQUE7SUFDQSxxQ0FBQTtFTDBuQk47O0VLdm5CRTtJQUNJLE1BQUE7SUFDQSxPQUFBO0VMMG5CTjs7RUt2bkJFO0lBQ0ksMEJBQUE7RUwwbkJOO0FBQ0YiLCJmaWxlIjoibWFpbi5jc3MifQ== */

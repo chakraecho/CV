@@ -14,9 +14,6 @@
     }
 }
 
-@mixin animation_settings{
-    animation:2s ease-in-out both;
-}
 
 //profil_aniamtions
 @for $a from 1 through 6{
@@ -30,10 +27,9 @@
             opacity:1;
         }
     }
-    .animation_showUp_#{$a}{
-        @include animation_settings;
-        transform-origin:bottom;
-        animation-name:showup_#{$a};
+    .animation_showUp_#{$a} {
+        animation: showup_#{$a} 2s ease-in-out both;
+        transform-origin: bottom;
         animation-delay: $a*100ms;
     }
     
@@ -50,8 +46,7 @@
                               }
     }
     .animation_progress_#{$i*5} {
-        @include animation_settings;
-        animation-name: progress_#{$i*5};
+        animation: progress_#{$i*5} 2s ease-in-out both;
         transform-origin: 0% 50%;
     }
 }
