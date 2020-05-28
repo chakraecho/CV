@@ -121,12 +121,15 @@ section {
         background-color: $blue;
     }
 
-    #experience {
-        background-color: $grey;
-        padding-bottom: 5%;
-        position: relative;
-        z-index: 2;
-    }
+#experience {
+    background-image: url('img/experience/background.jpg');
+    background-size: cover;
+    @include parallax;
+    
+    padding-bottom: 5%;
+    position: relative;
+    z-index: 2;
+}
 
     #portfolio {
         z-index: 4;
@@ -135,9 +138,7 @@ section {
     }
 
     .portfolio {
-        background-image: url('img/portfolio/portfolio_background.jpg');
-        background-size: cover;
-        @include parallax;;
+
         height:100vh;
 
         &_container {
