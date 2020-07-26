@@ -4,202 +4,13 @@ body {
 }
 
 header {
-  width: 100%;
   height: 100vh;
+  background-image: url("./img/header_background.jpg");
 }
 
-section {
-  width: 100%;
-  margin: auto;
-  padding-top: 8vh;
-  padding-bottom: 8vh;
-}
-
-.section_title {
-  text-align: center;
-  width: 100%;
-  font-size: 3em;
-  font-weight: bold;
-  background-color: grey;
-  opacity: 0.9;
-}
-
-.header {
-  height: 100vh;
-  background-image: url("img/header_background.jpg");
-  display: flex;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.header_front {
-  background-color: grey;
-  opacity: 0.9;
-  align-self: center;
-  width: 100%;
-}
-
-#profil {
-  padding-top: 10vh;
-  background-color: #19529C;
-}
-
-.profil_container {
-  border-radius: 10px;
-  background-color: antiquewhite;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  margin: 1%;
-  height: 100%;
-}
-.profil_block {
-  margin-top: 1%;
-}
-.profil_logo_icon {
-  width: 50%;
-  margin: auto;
-}
-.profil_logo_icon_eft {
-  width: 100%;
-}
-.profil_description {
-  justify-content: center;
-  margin-top: 1%;
-  margin-bottom: 1%;
-}
-.profil_description p {
-  text-align: center;
-}
-
-.competence {
-  display: grid;
-}
-
-#skills {
-  background-color: lightslategrey;
-}
-
-.skill {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 5%;
-}
-
-.progressbar {
-  justify-content: center;
-  border: 3px black solid;
-  border-radius: 5px;
-  height: 40px;
-  align-self: center;
-  padding: 0px;
-}
-.progressbar > span {
-  display: block;
-  height: 100%;
-  border-radius: 5px;
-  background-color: #2bc253;
-  background-image: linear-gradient(center bottom, #2bc253 37%, #54f054 69%);
-}
-
-.title {
-  justify-content: center;
-}
-
-#diploma {
-  background-color: #19529C;
-}
-
-#experience {
-  background-image: url("img/experience/background.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 5%;
-  position: relative;
-  z-index: 2;
-}
-
-#portfolio {
-  z-index: 4;
-  background-color: #19529C;
-  position: relative;
-}
-
-.portfolio {
-  height: 100vh;
-}
-.portfolio_container {
-  margin: auto;
-}
-.portfolio_container h4 {
-  margin: auto;
-}
-.portfolio_description_block {
-  width: 100%;
-}
-.portfolio_description_image {
-  width: 100%;
-}
-
-.contact {
-  padding: 5px 0px;
-  background-color: lightslategrey;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.contact_CV {
-  height: 10vh;
-  width: 100%;
-  background-color: antiquewhite;
-  border: 5px solid;
-  border-color: dodgerblue;
-}
-.contact_logo_row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.contact_logo_block {
-  width: 30%;
-  margin: auto;
-}
-.contact_logo_image {
-  width: 100%;
-}
-.contact_infos {
-  background-color: slategrey;
-  justify-content: space-around;
-}
-.contact_infos_lign {
-  justify-content: space-around;
-}
-
-.navbar {
-  background-color: lightslategrey;
-  height: 10%;
-  width: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-.navbar_minified {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  background-color: lightslategrey;
-  height: 5vh;
-  width: 100%;
-  position: fixed;
-  top: 0px;
-}
-.navbar_minified_off {
-  display: none;
+#header_bg {
+  background-color: #3498db;
+  opacity: 0.8;
 }
 
 .hexagon {
@@ -211,62 +22,17 @@ section {
   width: 200px;
 }
 
-.logo {
-  width: 100%;
-}
-.logo_frameworks {
-  width: 70%;
-}
-.logo_frameworks_sass {
-  width: 50%;
+nav {
+  z-index: 30;
 }
 
-.level {
-  display: inline-block;
-  border: 3px black solid;
-  width: 2.5em;
-  height: 1.2em;
-  margin: 3px;
-  background-color: white;
-}
-.level_on {
-  background-color: springgreen;
-}
-.level_off {
-  background-color: white;
-}
-.level_right {
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-}
-.level_left {
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-}
-
-h2 {
-  font-weight: bold;
-  font-size: 3em;
+section {
+  height: 100vh;
 }
 
 h3 {
-  margin-top: 4%;
-  margin-bottom: 8%;
-  text-align: center;
-}
-
-h4 {
-  text-align: center;
-}
-
-#profil p {
-  color: antiquewhite;
-}
-#profil h4 {
-  color: antiquewhite;
-}
-#profil .profil_container p {
-  color: black;
+  height: 5em;
+  width: 100%;
 }
 
 .profil_block {

@@ -1,23 +1,4 @@
-.navbar {
-    background-color: $grey;
-    height: 10%;
-    width:100%;
-    position:absolute;
-    top:0px;left:0px;
-    &_minified{
-        display:flex;
-        flex-direction:row;
-        justify-content:space-evenly;
-        background-color: $grey;
-        height:5vh;
-        width:100%;
-        position:fixed;
-        top:0px;
-        &_off{
-            display:none;
-        }
-    }
-}
+
 
 .hexagon {
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
@@ -28,40 +9,3 @@
     width: 200px;
 }
 
-.logo {
-    width: 100%;
-
-    &_frameworks {
-        width: 70%;
-        &_sass{
-            width:50%;
-        }
-    }
-}
-
-.level {
-    display: inline-block;
-    border: 3px black solid;
-    width: 2.5em;
-    height: 1.2em;
-    margin:3px;
-    background-color:white;
-
-    &_on {
-        background-color: $green;
-    }
-
-    &_off {
-        background-color: white;
-    }
-
-    &_right {
-            border-top-right-radius: 50px;
-            border-bottom-right-radius: 50px;
-    }
-
-    &_left {
-        border-top-left-radius: 50px;
-        border-bottom-left-radius: 50px;
-    }
-}

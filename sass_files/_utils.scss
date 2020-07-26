@@ -1,0 +1,17 @@
+$grey:lightslategrey;
+$header-color:#62C6F4;
+$container-color:#F3E88D;
+$blue: #19529C;
+$green: springgreen;
+$ux-blue: #3498db;
+
+@mixin timeline-border {
+    border:red 3px solid;
+}
+
+@mixin parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
