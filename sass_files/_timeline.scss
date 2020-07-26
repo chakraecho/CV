@@ -14,7 +14,6 @@
     }
     &_cache{
         height:100%;
-        background-color:$blue;
         width:10%;
         position:relative;
         z-index:2;
@@ -28,6 +27,7 @@
             z-index: 1;
             border-left: solid 3px red;
             padding: 3em 0px 3em 0px;
+            overflow-x: hidden;
         }
 
         &_right {
@@ -36,6 +36,8 @@
             border-right: solid 3px red;
             padding: 3em 0px 3em 0px;
             margin-right: 0px;
+            overflow-x: hidden;
+
         }
     }
 

@@ -27,7 +27,7 @@ nav {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 h3 {
@@ -509,7 +509,6 @@ h3 {
 }
 .timeline_cache {
   height: 100%;
-  background-color: #19529C;
   width: 10%;
   position: relative;
   z-index: 2;
@@ -520,6 +519,7 @@ h3 {
   z-index: 1;
   border-left: solid 3px red;
   padding: 3em 0px 3em 0px;
+  overflow-x: hidden;
 }
 .diploma_border_right {
   position: relative;
@@ -527,6 +527,7 @@ h3 {
   border-right: solid 3px red;
   padding: 3em 0px 3em 0px;
   margin-right: 0px;
+  overflow-x: hidden;
 }
 .diploma_block {
   background-color: antiquewhite;
