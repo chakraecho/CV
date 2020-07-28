@@ -1,12 +1,27 @@
+*{
+    padding:0;
+    margin:0;
+    
+}
+
 nav{
     z-index: 30;
+    height:10vh;
 }
 
 section{
-    min-height:100vh;
+    min-height:90vh;
+}
+h1{
+    font-family: heater;
+    font-size:8em;
+}
+h2{
+    background-color: $ux-orange;
+    @include slide-animation;
 }
 
 h3{
-    height:5em;
-    width: 100%;
+    font-family:heater;
+    font-size:4em;
 }

@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "heater";
+  src: url("./assets/font/Heaters.otf");
+}
 body {
   max-width: 100%;
   overflow-x: hidden;
@@ -9,8 +13,7 @@ header {
 }
 
 #header_bg {
-  background-color: #3498db;
-  opacity: 0.8;
+  background-color: rgba(52, 152, 219, 0.8);
 }
 
 .hexagon {
@@ -22,32 +25,60 @@ header {
   width: 200px;
 }
 
+.lign {
+  width: 100%;
+  height: 1px;
+  display: inline-block;
+  background-color: #bdc3c7;
+}
+
+.diploma_accordeon {
+  background-color: #2c3e50;
+  height: 5em;
+  color: #bdc3c7;
+}
+.diploma_container {
+  border: white 1px solid;
+  width: 100%;
+  color: #bdc3c7;
+}
+.diploma_img {
+  max-height: 4.5em;
+  max-width: 4.5em;
+}
+.diploma_img_block {
+  width: 5em;
+  display: inline-block;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
 nav {
   z-index: 30;
+  height: 10vh;
 }
 
 section {
-  min-height: 100vh;
+  min-height: 90vh;
+}
+
+h1 {
+  font-family: heater;
+  font-size: 8em;
+}
+
+h2 {
+  background-color: #e67e22;
+  white-space: nowrap;
+  overflow-x: none;
 }
 
 h3 {
-  height: 5em;
-  width: 100%;
-}
-
-.profil_block {
-  opacity: 0;
-}
-
-.progressbar_inline {
-  transform: scaleX(0);
-}
-
-.diploma_block_left {
-  transform: translateX(-100%);
-}
-.diploma_block_right {
-  transform: translateX(100%);
+  font-family: heater;
+  font-size: 4em;
 }
 
 @keyframes showup_1 {
@@ -208,262 +239,242 @@ h3 {
 
 @keyframes progress_5 {
   from {
-    transform: scaleX(0);
+    width: 0%;
   }
   to {
-    transform: scaleX(0.05);
+    width: 5%;
   }
 }
 .animation_progress_5 {
-  animation: progress_5 2s ease-in-out both;
-  transform-origin: 0% 50%;
+  animation: progress_5 2s linear both;
 }
 
 @keyframes progress_10 {
   from {
-    transform: scaleX(0);
+    width: 0%;
   }
   to {
-    transform: scaleX(0.1);
+    width: 10%;
   }
 }
 .animation_progress_10 {
-  animation: progress_10 2s ease-in-out both;
-  transform-origin: 0% 50%;
+  animation: progress_10 2s linear both;
 }
 
 @keyframes progress_15 {
   from {
-    transform: scaleX(0);
+    width: 0%;
   }
   to {
-    transform: scaleX(0.15);
+    width: 15%;
   }
 }
 .animation_progress_15 {
-  animation: progress_15 2s ease-in-out both;
-  transform-origin: 0% 50%;
+  animation: progress_15 2s linear both;
 }
 
 @keyframes progress_20 {
   from {
-    transform: scaleX(0);
+    width: 0%;
   }
   to {
-    transform: scaleX(0.2);
+    width: 20%;
   }
 }
 .animation_progress_20 {
-  animation: progress_20 2s ease-in-out both;
-  transform-origin: 0% 50%;
+  animation: progress_20 2s linear both;
 }
 
 @keyframes progress_25 {
   from {
-    transform: scaleX(0);
+    width: 0%;
   }
   to {
-    transform: scaleX(0.25);
+    width: 25%;
   }
 }
 .animation_progress_25 {
-  animation: progress_25 2s ease-in-out both;
-  transform-origin: 0% 50%;
+  animation: progress_25 2s linear both;
 }
 
 @keyframes progress_30 {
   from {
-    transform: scaleX(0);
+    width: 0%;
   }
   to {
-    transform: scaleX(0.3);
+    width: 30%;
   }
 }
 .animation_progress_30 {
-  animation: progress_30 2s ease-in-out both;
-  transform-origin: 0% 50%;
+  animation: progress_30 2s linear both;
 }
 
 @keyframes progress_35 {
   from {
-    transform: scaleX(0);
+    width: 0%;
   }
   to {
-    transform: scaleX(0.35);
+    width: 35%;
   }
 }
 .animation_progress_35 {
-  animation: progress_35 2s ease-in-out both;
-  transform-origin: 0% 50%;
+  animation: progress_35 2s linear both;
 }
 
 @keyframes progress_40 {
   from {
-    transform: scaleX(0);
+    width: 0%;
   }
   to {
-    transform: scaleX(0.4);
+    width: 40%;
   }
 }
 .animation_progress_40 {
-  animation: progress_40 2s ease-in-out both;
-  transform-origin: 0% 50%;
+  animation: progress_40 2s linear both;
 }
 
 @keyframes progress_45 {
   from {
-    transform: scaleX(0);
+    width: 0%;
   }
   to {
-    transform: scaleX(0.45);
+    width: 45%;
   }
 }
 .animation_progress_45 {
-  animation: progress_45 2s ease-in-out both;
-  transform-origin: 0% 50%;
+  animation: progress_45 2s linear both;
 }
 
 @keyframes progress_50 {
   from {
-    transform: scaleX(0);
+    width: 0%;
   }
   to {
-    transform: scaleX(0.5);
+    width: 50%;
   }
 }
 .animation_progress_50 {
-  animation: progress_50 2s ease-in-out both;
-  transform-origin: 0% 50%;
+  animation: progress_50 2s linear both;
 }
 
 @keyframes progress_55 {
   from {
-    transform: scaleX(0);
+    width: 0%;
   }
   to {
-    transform: scaleX(0.55);
+    width: 55%;
   }
 }
 .animation_progress_55 {
-  animation: progress_55 2s ease-in-out both;
-  transform-origin: 0% 50%;
+  animation: progress_55 2s linear both;
 }
 
 @keyframes progress_60 {
   from {
-    transform: scaleX(0);
+    width: 0%;
   }
   to {
-    transform: scaleX(0.6);
+    width: 60%;
   }
 }
 .animation_progress_60 {
-  animation: progress_60 2s ease-in-out both;
-  transform-origin: 0% 50%;
+  animation: progress_60 2s linear both;
 }
 
 @keyframes progress_65 {
   from {
-    transform: scaleX(0);
+    width: 0%;
   }
   to {
-    transform: scaleX(0.65);
+    width: 65%;
   }
 }
 .animation_progress_65 {
-  animation: progress_65 2s ease-in-out both;
-  transform-origin: 0% 50%;
+  animation: progress_65 2s linear both;
 }
 
 @keyframes progress_70 {
   from {
-    transform: scaleX(0);
+    width: 0%;
   }
   to {
-    transform: scaleX(0.7);
+    width: 70%;
   }
 }
 .animation_progress_70 {
-  animation: progress_70 2s ease-in-out both;
-  transform-origin: 0% 50%;
+  animation: progress_70 2s linear both;
 }
 
 @keyframes progress_75 {
   from {
-    transform: scaleX(0);
+    width: 0%;
   }
   to {
-    transform: scaleX(0.75);
+    width: 75%;
   }
 }
 .animation_progress_75 {
-  animation: progress_75 2s ease-in-out both;
-  transform-origin: 0% 50%;
+  animation: progress_75 2s linear both;
 }
 
 @keyframes progress_80 {
   from {
-    transform: scaleX(0);
+    width: 0%;
   }
   to {
-    transform: scaleX(0.8);
+    width: 80%;
   }
 }
 .animation_progress_80 {
-  animation: progress_80 2s ease-in-out both;
-  transform-origin: 0% 50%;
+  animation: progress_80 2s linear both;
 }
 
 @keyframes progress_85 {
   from {
-    transform: scaleX(0);
+    width: 0%;
   }
   to {
-    transform: scaleX(0.85);
+    width: 85%;
   }
 }
 .animation_progress_85 {
-  animation: progress_85 2s ease-in-out both;
-  transform-origin: 0% 50%;
+  animation: progress_85 2s linear both;
 }
 
 @keyframes progress_90 {
   from {
-    transform: scaleX(0);
+    width: 0%;
   }
   to {
-    transform: scaleX(0.9);
+    width: 90%;
   }
 }
 .animation_progress_90 {
-  animation: progress_90 2s ease-in-out both;
-  transform-origin: 0% 50%;
+  animation: progress_90 2s linear both;
 }
 
 @keyframes progress_95 {
   from {
-    transform: scaleX(0);
+    width: 0%;
   }
   to {
-    transform: scaleX(0.95);
+    width: 95%;
   }
 }
 .animation_progress_95 {
-  animation: progress_95 2s ease-in-out both;
-  transform-origin: 0% 50%;
+  animation: progress_95 2s linear both;
 }
 
 @keyframes progress_100 {
   from {
-    transform: scaleX(0);
+    width: 0%;
   }
   to {
-    transform: scaleX(1);
+    width: 100%;
   }
 }
 .animation_progress_100 {
-  animation: progress_100 2s ease-in-out both;
-  transform-origin: 0% 50%;
+  animation: progress_100 2s linear both;
 }
 
 @keyframes diploma_slide_left {
@@ -502,6 +513,10 @@ h3 {
   animation: diploma_slide_right 3s ease-in both;
 }
 
+@font-face {
+  font-family: "heater";
+  src: url("./assets/font/Heaters.otf");
+}
 .timeline_block {
   display: flex;
   flex-direction: row;

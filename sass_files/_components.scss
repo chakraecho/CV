@@ -9,3 +9,30 @@
     width: 200px;
 }
 
+.lign{
+    width:100%;
+    height:1px;
+    display:inline-block;
+    background-color: $ux-grey;
+}
+
+.diploma{
+    &_accordeon{
+        background-color: $ux-midnight;
+        height:5em;
+        color:$ux-grey;
+    }
+    &_container{
+        border: white 1px solid;
+        width:100%;
+        color:$ux-grey;
+    }
+    &_img{
+        &_block{
+            width:5em;
+            display:inline-block;
+        }
+            max-height: 4.5em;;
+            max-width: 4.5em;
+    }
+}

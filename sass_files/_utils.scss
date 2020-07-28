@@ -3,7 +3,15 @@ $header-color:#62C6F4;
 $container-color:#F3E88D;
 $blue: #19529C;
 $green: springgreen;
-$ux-blue: #3498db;
+$ux-blue: rgb(52, 152, 219, 0.8);
+$ux-orange:#e67e22;
+$ux-grey: rgb(189, 195, 199);
+$ux-midnight:rgb(44, 62, 80);
+
+@font-face{
+    font-family: 'heater';
+    src:url('./assets/font/Heaters.otf');
+}
 
 @mixin timeline-border {
     border:red 3px solid;
@@ -14,4 +22,8 @@ $ux-blue: #3498db;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+@mixin slide-animation{
+    white-space: nowrap;
+    overflow-x:none;
 }

@@ -47,18 +47,23 @@
             <div class='w-100 h-100 d-flex flex-row' id='header_bg'><!--full width/height-->
                 <div class='align-self-center mx-auto p-5c' id="header_name"><!--name-->
                     <h1>Huang Julien</h1>
-                    <h2>Developpeur FullStack</h2>
+                    <h2 class="p-2">Developpeur FullStack</h2>
                 </div>
             </div>
             
         </header>
         <main>
             <section id='a_propos'>
-                <h3 class='h1 text-center p-2'>
-                    A <span class='underline_blue'>propos</span> de moi
-                </h3>
-                <div class='container'>
-                    <div class='row'>
+                <div class='row col-12 col-sm-10 col-md-8 mx-auto'>
+                    <div class='lign col align-self-center'></div>
+                    <h3 class='mx-auto text-center p-2'>
+                        A propos de moi
+                     </h3>
+                    <div class='lign col align-self-center'></div>
+                </div>
+
+                <div class='container mt-4'>
+                    <div class='row flex-md-row flex-column-reverse'>
                         <div class='col-md-6'>
                             <p>Passionné d'informatique depuis le plus jeune âge, je me suis tourné vers le developpement web 
                             suite à une licence LEA anglais-chinois.<br/>
@@ -72,125 +77,130 @@
                             </div>
                         </div>
                     </div>
+                    <div class='mt-4 row'>
+                        <p class="offset-lg-4 offset-1 offset-sm-2 offset-md-3">Je suis ...</p>
+                    </div>
                     <div class='row'>
-                        <ul v-for="caractere in caracteres" class='col-4'>
-                            {{caractere}}
+                        <ul v-for="caractere in caracteres" class='text-center col-4'>
+                           <li>{{caractere}}</li> 
                         </ul>
                     </div>
                 </div>
             </section>
-            <section id='parcours'>
-                <h3 class='h1 text-center p-2'>
-                    Parcours
-                </h3>
-                <div class="row">
-                    <div class="timeline_block">
-                        <div class="timeline_cache">
-        
-                        </div>
-                        <div class="diploma_border_left  col-lg-6 col-sm-12">
-                            <div class="diploma_block diploma_block_left diploma_animation_1 row">
-                                <div class="col-10">
-                                    <div class="diploma_timeline_year">
-                                        2019
-                                    </div>
-                                    <div class="col-12 diploma_block_card">
-                                        <div class="row">
-                                            <div class="diploma_title">
-                                                Licence en langues étrangèes appliquées
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="diploma_description">
-                                                <em>spécialité Anglais-Chinois</em><br />
-                                                Diplôme obtenu avec mention à l'université Picardie Jules Vernes à Amiens (80000)
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-2 diploma_logo">
-                                    <img src="img/diploma/linguistics.svg" alt="language svg" class="diploma_icon" />
-        
+            <section id='parcours' class='bg-dark pb-2'>
+                <div class='row col-12 col-sm-10 col-md-8 mx-auto'>
+                    <div class='lign col align-self-center'></div>
+                    <h3 class='mx-auto text-center text-light p-2'>
+                        Parcours
+                     </h3>
+                    <div class='lign col align-self-center'></div>
+                </div>
+                <div class='container mt-4'>
+                    <template v-for='item in diploma'>
+                        <div class='row'>
+                            
+                            <button class='w-100 diploma_accordeon' data-toggle="collapse" aria-expanded="false" :data-target='"#diploma_"+item.id'>
+                                <span class='diploma_img_block'>
+                                    <img :src='item.img' :alt='item.alt' class='w-100 diploma_img' />
+                                </span>
+                            </button>
+                            <div class='collapse w-100 diploma_container' :id='"diploma_"+item.id'>
+                                <div class='col-10 pt-3 pb-3'>
+                                    <p><b>{{item.name}} - {{item.place}} - {{item.year}}</b> </p>
+
+                                    <p>{{item.description}}</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="timeline_block">
-                        <div class="diploma_border_right offset-lg-5 col-lg-6 col-sm-12">
-                            <div class="diploma_block diploma_block_right diploma_animation_2 row">
-                                <div class="col-2 diploma_logo">
-                                    <img src="img/diploma/math.svg" alt="math svg" class="diploma_icon" />
-        
-                                </div>
-                                <div class="col-10">
-                                    <div class="diploma_timeline_year">
-                                        2016
-                                    </div>
-                                    <div class="diploma_block_card col-12">
-                                        <div class="row">
-                                            <div class="diploma_title">
-                                                Baccalauréat Scientifique
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="diploma_description">
-                                                <em>spécialité Mathématiques</em><br />
-                                                Diplôme obtenu avec mention par le Lycée Robert de Luzarches à Amiens (80000)
-                                            </div>
-                                        </div>
+                    </template>
+                </div>
+            </section>
+            <section id='competence'>
+                <div class='row col-12 col-sm-10 col-md-8 mx-auto'>
+                    <div class='lign col align-self-center'></div>
+                    <h3 class='mx-auto text-center p-2'>
+                        Compétences
+                     </h3>
+                    <div class='lign col align-self-center'></div>
+                </div>
+                <div class="container">
+                    <a class='skills h2 mt-2 ' data-toggle='collapse' data-target='#skills_front'  role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Front-end
+                    </a>
+                    <div id="skills_front" class='row mt-2'>
+                       <template  v-for='skill in skills_front' >
+                            <div class='mx-auto col-lg-3 col-6 col-md-4 mb-4'>
+                                <div class='row'>
+                                    <img class='col-4' :src='skill.url' :alt='skill.name'>
+                                    <div class='progress col-8 align-self-center'>
+                                        <div class="progress-bar progress-bar-success" :id='skill.name' role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" :class='"progress_animation_" + skill.progress'></div>                                </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="timeline_cache">
-        
-                        </div>
+                       </template>
                     </div>
-                    <div class="timeline_block ">
-                        <div class="timeline_cache">
-        
-                        </div>
-                        <div class=" diploma_border_left col-lg-7 col-sm-12">
-                            <div class="diploma_block diploma_block_left diploma_animation_3 row">
-                                <div class="col-10">
-                                    <div class="diploma_timeline_year">
-                                        2014
-                                    </div>
-                                    <div class="col-12 diploma_block_card">
-                                        <div class="row">
-                                            <div class="diploma_title">
-                                                Brevet des collèges
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="diploma_description">
-                                                Diplôme obtenu avec mention par le collège Joliot-Curie à Longueau (80330)
-                                            </div>
-                                        </div>
+                    <a class='skills h2 mt-2' data-toggle='collapse' data-target='#skills_front'  role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Back-end
+                    </a>
+                    <div id="skills_back" class='row mt-2'>
+                        <template  v-for='skill in skills_back' >
+                            <div class='col-lg-3 col-6 col-md-4 mb-4'>
+                                <div class='row'>
+                                    <img class='col-4' :src='skill.url' :alt='skill.name'>
+                                    <div class='progress col-8 align-self-center'>
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" :class='"progress_animation_" + skill.progress'></div>                                </div>
                                     </div>
                                 </div>
-                                <div class="col-2  diploma_logo">
-                                    <img src="img/diploma/school.svg" alt="school svg" class="diploma_icon" />
+                            </div>
+                       </template>
+                    </div>
+                    <a class='skills h2 mt-2' data-toggle='collapse' data-target='#skills_front'  role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Frameworks
+                    </a> 
+                    <div id="skills_frameworks" class='row mt-2'>
+                        <template  v-for='skill in skills_frameworks' >
+                            <div class='col-lg-3 col-6 col-md-4 mb-4 mx-auto'>
+                                <div class='row'>
+                                    <img class='col-4' :src='skill.url' :alt='skill.name'>
+                                    <div class='progress col-8 align-self-center'>
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" :class='"progress_animation_" + skill.progress'></div>                                </div>
+                                    </div>
                                 </div>
+                            </div>
+                       </template>
+                    </div>
+                </div>
+            </section>
+            <section id='services' class='bg-dark'>
+                <div class='row col-12 col-sm-10 col-md-8 mx-auto'>
+                    <div class='lign col align-self-center'></div>
+                    <h3 class='mx-auto text-center text-light p-2'>
+                        Services
+                     </h3>
+                    <div class='lign col align-self-center'></div>
+                </div>
+                <p class='mt-4 mb-4 text-light'>Voici mes principaux services mais n'hésitez pas à me contacter si vous avez une demande spécifique !</p>
+                <div class='container mt-5'>
+                    <div class='row justify-content-center'>
+                        <div class='card  col-5 col-sm-4 mb-4  col-md-3 mx-4 ' v-for="service in services">
+                            <div class="card-img-top d-flex flex-row justify-content-center">
+                                <img :src='service.imgUrl'  :alt='service.alt' class='w-50'/>
+                            </div>
+                            <div class='card-body'>
+                                <h5 class='card-title text-center'>{{service.name}}</h4>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section id='compétence'>
-                <h3 class='h1 text-center p-2'>
-                    Compétences
-                </h3>
-            </section>
-            <section id='services'>
-                <h3 class='h1 text-center p-2'>
-                    Services
-                </h3>
-            </section>
             <section id='portfolio'>
-                <h3 class='h1 text-center p-2'>
-                    Portfolio
-                </h3>
+                <div class='row col-12 col-sm-10 col-md-8 mx-auto'>
+                    <div class='lign col align-self-center'></div>
+                    <h3 class='mx-auto text-center p-2'>
+                        Portfolio
+                     </h3>
+                    <div class='lign col align-self-center'></div>
+                </div>
             </section>
             <section id='contact'>
                 <h3 class='h1 text-center p-2'>
