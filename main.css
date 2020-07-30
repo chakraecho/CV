@@ -91,6 +91,10 @@ h3 {
   font-size: 4em;
 }
 
+.vh-50 {
+  height: 50vh;
+}
+
 @keyframes showup_1 {
   from {
     transform: translateY(100px);
