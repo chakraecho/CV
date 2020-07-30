@@ -92,7 +92,7 @@ h3 {
 }
 
 .vh-50 {
-  height: 50vh;
+  min-height: 50vh;
 }
 
 @keyframes showup_1 {
