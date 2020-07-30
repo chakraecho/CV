@@ -36,3 +36,13 @@
             max-width: 4.5em;
     }
 }
+
+.cache_img{
+    opacity: 0;
+    background: $ux-grey;
+    transition: all 500ms;
+    &:hover{
+        color:white;
+        opacity: 0.7;
+    }
+}

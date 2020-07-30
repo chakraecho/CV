@@ -8,7 +8,7 @@
     <title>Huang Julien - Developpeur FullStack JS</title>
 </head>
 <body>
-    <div id='app'>
+    
         <header class="d-flex flex-column">
             <nav class='navbar w-100 navbar-expand-md navbar-dark bg-dark position-fixed'>
                 <a class='navbar-brand' href='#acceuil'>
@@ -46,7 +46,7 @@
             <!--background-->
             <div class='w-100 h-100 d-flex flex-row' id='header_bg'><!--full width/height-->
                 <div class='align-self-center mx-auto p-5c' id="header_name"><!--name-->
-                    <h1>Huang Julien</h1>
+                    <h1 class='text-center'>Huang Julien</h1>
                     <h2 class="p-2">Developpeur FullStack</h2>
                 </div>
             </div>
@@ -180,16 +180,22 @@
                     <div class='lign col align-self-center'></div>
                 </div>
                 <p class='mt-4 mb-4 text-light'>Voici mes principaux services mais n'hésitez pas à me contacter si vous avez une demande spécifique !</p>
-                <div class='container mt-5'>
+                <div class='container mt-5 mx-auto'>
                     <div class='row justify-content-center'>
-                        <div class='card  col-5 col-sm-4 mb-4  col-md-3 mx-4 ' v-for="service in services">
-                            <div class="card-img-top d-flex flex-row justify-content-center">
-                                <img :src='service.imgUrl'  :alt='service.alt' class='w-50'/>
+                        <template  v-for="service in services">
+                            <div class='col-6  col-sm-4 mb-4  col-md-3'>
+                                <div class='card p-0 h-100 col-11 col-sm-12 mx-auto '>
+                                    <div class="card-img-top d-flex flex-row justify-content-center">
+                                        <img :src='service.imgUrl'  :alt='service.alt' class='w-50'/>
+                                    </div>
+                                    <div class='card-body p-1'>
+                                        <h5 class='card-title text-center'>{{service.name}}</h4>
+                                    </div>
+                                </div>
                             </div>
-                            <div class='card-body'>
-                                <h5 class='card-title text-center'>{{service.name}}</h4>
-                            </div>
-                        </div>
+                        </template>
+                       
+                        
                     </div>
                 </div>
             </section>
@@ -201,6 +207,46 @@
                      </h3>
                     <div class='lign col align-self-center'></div>
                 </div>
+                <div class='container'>
+                    <template v-for='item in portfolio.main'>
+                        <div class='card mx-auto col-5 col-sm-4 col-md-3'>
+                            <div class='card-img-top'>
+                                <img :src='item.imgUrl' :alt='item.alt' class='w-100'/>
+                            </div>
+                            <div class='card-body'>
+                                <div class='card-title'>
+                                    <p>{{item.name}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+                <div class='container mt-2'>
+                    <button class='w-100 openclassrooms_accordeon' data-toggle="collapse" aria-expanded="false" data-target='#openclassrooms'>
+                        <p>Projets effectués dans le cadre du parcours Développeur web de openclassrooms</p>
+                    </button>
+                    <div class='container-fluid collapse' id='openclassrooms'>
+                        <div class='row'>
+                            <template v-for='item in portfolio.OP'>
+                                <div class='col-12 col-md-4 mx-auto mt-5  '>
+                                    <div class='row col-11 mx-auto border rounded h-100 border-primary'>
+                                        <div class='col-5  p-0 col-md-10 mx-auto d-flex flex-row '>
+                                            
+                                            <img :src='item.imgUrl' :alt='item.alt' class=' p-0 w-100 align-self-center position-relative'/>
+                                            <div class='p-0 m-0 w-100 h-100 mx-auto position-absolute cache_img d-flex align-items-center justify-content-center'>
+                                                <a :href='item.urlHost' class='text-center' target="_blank" >Github</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class='col-7 col-md-12 mx-auto'>
+                                            {{item.name}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section id='contact'>
                 <h3 class='h1 text-center p-2'>
@@ -208,7 +254,7 @@
                 </h3>
             </section>
         </main>
-    </div>
+    
     
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
