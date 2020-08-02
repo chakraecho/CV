@@ -106,6 +106,10 @@ h3 {
   min-height: 50vh;
 }
 
+#contact {
+  min-height: 90vh;
+}
+
 @keyframes showup_1 {
   from {
     transform: translateY(100px);

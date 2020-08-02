@@ -132,7 +132,8 @@ const diploma = new Vue({
 				parcours
 				 `,
 				img:'./img/diploma/code.svg',
-				alt:'coder'
+				alt:'coder',
+				show : true
 			},
 			{
 				id:'2',
