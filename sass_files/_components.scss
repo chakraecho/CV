@@ -46,3 +46,13 @@
         opacity: 0.7;
     }
 }
+.img_link{
+
+    &:hover{
+        + .cache_img{
+            color:white;
+            opacity: 0.7;
+        }
+        
+    }
+}

@@ -13,6 +13,11 @@ $ux-midnight:rgb(44, 62, 80);
     src:url('./assets/font/Heaters.otf');
 }
 
+@font-face{
+    font-family: 'rubik' ;
+    src:url('./assets/font/Rubik.ttf')
+}
+
 @mixin timeline-border {
     border:red 3px solid;
 }

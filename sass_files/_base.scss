@@ -1,7 +1,7 @@
 *{
     padding:0;
     margin:0;
-    
+    font-family: rubik;
 }
 
 nav{
@@ -10,7 +10,8 @@ nav{
 }
 
 section{
-    min-height:90vh;
+    padding-top:5vh;
+    min-height:100vh;
 }
 h1{
     font-family: heater;
@@ -25,6 +26,7 @@ h3{
     font-family:heater;
     font-size:4em;
 }
+
 .vh-50{
     min-height:50vh;
 }

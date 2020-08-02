@@ -85,6 +85,34 @@ const skills = new Vue({
 				progress: '85'
 			}
 		]
+	},
+	methods:{
+		isInViewport(elem) {
+			var distance = elem.getBoundingClientRect();
+			return (
+				distance.top >= 0 &&
+				distance.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+			);
+		}
+	},
+	mounted: function(){
+		window.addEventListener('scroll', ()=>{
+			for (let skill of this.skills_front){
+				if(this.isInViewport(document.querySelector('#'+ skill.name))){
+					document.querySelector('#'+skill.name).classList.add('animation_progress_'+skill.progress)
+				}
+			};
+			for (let skill of this.skills_back){
+				if(this.isInViewport(document.querySelector('#'+ skill.name))){
+					document.querySelector('#'+skill.name).classList.add('animation_progress_'+skill.progress)
+				}
+			};
+			for (let skill of this.skills_frameworks){
+				if(this.isInViewport(document.querySelector('#'+ skill.name))){
+					document.querySelector('#'+skill.name).classList.add('animation_progress_'+skill.progress)
+				}
+			}
+		})
 	}
 })
 
@@ -139,7 +167,7 @@ const portfolio = new Vue({
 	data:{
 		portfolio:{
 			main: [{
-				name:'Gestionnaire de compte-rendu',
+				name:'Gestionnaire de compte-rendu pour le club informatique de Polytech Lille',
 				role:'Dev Front',
 				url:'https://gitlab.com/ClubInfoPolytechLille/gestionnaire-de-comptes-rendus',
 				imgUrl:'./img/portfolio/GCR.png',
