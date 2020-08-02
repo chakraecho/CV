@@ -106,23 +106,24 @@
                     <div class='lign col align-self-center'></div>
                 </div>
                 <div class='container mt-4'>
-                    <template v-for='item in diploma'>
-                        <div class='row'>
-                            
-                            <button class='w-100 diploma_accordeon' data-toggle="collapse" aria-expanded="false" :data-target='"#diploma_"+item.id'>
-                                <span class='diploma_img_block'>
-                                    <img :src='item.img' :alt='item.alt' class='w-100 diploma_img' />
-                                </span>
-                            </button>
-                            <div class='collapse w-100 diploma_container' :id='"diploma_"+item.id'>
-                                <div class='col-10 mx-auto pt-3 pb-3'>
+                    <div class='accordion' id='diploma_accordion'>
+                        <div class='card' v-for='item in diploma'>
+                            <div class='card-header p-0 rounded' :id='"diploma_heading"+ item.id'>
+                                <button type="button" class='w-100 diploma_accordeon' data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne" :data-target='"#diploma_content"+item.id'>
+                                    <span class='diploma_img_block w-100'>
+                                        <img :src='item.img' :alt='item.alt' class='w-100 diploma_img' />
+                                    </span>
+                                </button>
+                            </div>
+                            <div :id="'diploma_content'+item.id" class="collapse" aria-labelledby="headingOne" data-parent="#diploma_accordion">
+                                <div class="card-body bg-dark diploma_container">
                                     <p><b>{{item.name}} - {{item.place}} - {{item.year}}</b> </p>
-
+            
                                     <p>{{item.description}}</p>
                                 </div>
-                            </div>
+                              </div>
                         </div>
-                    </template>
+                    </div>
                 </div>
             </section>
             <section id='competence'>
@@ -242,7 +243,7 @@
                     <button class='w-100 openclassrooms_accordeon' data-toggle="collapse" aria-expanded="false" data-target='#openclassrooms'>
                         <p>Projets effectués dans le cadre du parcours Développeur web de openclassrooms</p>
                     </button>
-                    <div class='container-fluid collapse mb-4' id='openclassrooms'>
+                    <div class='container-fluid collapse mb-4 border border-dark' id='openclassrooms'>
                         <div class='row'>
                             <template v-for='item in portfolio.OP'>
                                 <div class='col-12 col-md-4 mx-auto mt-5  '>
