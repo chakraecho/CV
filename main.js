@@ -12,7 +12,29 @@ const profil = new Vue(
 	{
 		el:'#a_propos',
 		data:{
-			caracteres: ['autonome', 'curieux', 'sérieux']
+			caracteres: ['autonome', 'curieux', 'sérieux'],
+			hobbies:[
+				{
+					name:"l'histoire",
+					img:'./img/profil/history.svg',
+					alt:'j\'aime l\'histoire'
+				},
+				{
+					name:"le travail d'équipe",
+					img:'./img/profil/teamwork.svg',
+					alt:"j'aime le travail d'équipe"
+				},
+				{
+					name:'Escape From Tarkov',
+					img:'./img/profil/eft.png',
+					alt:"j'aime jouer à escape from tarkov"
+				},
+				{
+					name:'cuisiner',
+					img:'./img/profil/baking.svg',
+					alt:"j'aime cuisiner"
+				}
+			]
 		}
 	}
 )

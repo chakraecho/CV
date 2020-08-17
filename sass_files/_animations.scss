@@ -45,45 +45,25 @@
         
     }
 }
-
-
-//diploma animations
-@keyframes diploma_slide_left{
+@keyframes header-animation{
     0%{
-        transform:translateX(-100%);
-
+        width:0%
     }
-    85%{
-        transform:translateX(0%)
+    75%{
+        width:100%;
+        opacity: 1;
     }
     90%{
-        transform:translateX(-5%)
+        opacity:0;
     }
     100%{
-        transform:translateX(0%)
+        opacity:1
     }
 }
-.diploma_slide_left{
-    animation:diploma_slide_left 3s ease-in both;
-}
 
-@keyframes diploma_slide_right {
-    0% {
-        transform: translateX(100%);
-    }
-
-    85% {
-        transform: translateX(0%)
-    }
-
-    90% {
-        transform: translateX(5%)
-    }
-
-    100% {
-        transform: translateX(0%)
-    }
-}
-.diploma_slide_right {
-    animation: diploma_slide_right 3s ease-in both;
+.header_animation{
+    overflow-x: hidden;
+    white-space: nowrap;
+    animation: 1s header-animation linear both;
+    animation-delay: 500ms;
 }

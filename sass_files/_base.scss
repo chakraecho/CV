@@ -15,11 +15,12 @@ section{
 }
 h1{
     font-family: heater;
-    font-size:8em;
+    font-size:7em;
 }
 h2{
     background-color: $ux-orange;
     @include slide-animation;
+    opacity:0;
 }
 
 h3{

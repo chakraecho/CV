@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='title' content='Julien Huang - Developpeur Web - NodeJS VueJS WordPress Prestashop'>
+    <meta name='description' content='Mon profil en résumé. Jeune développeur fullstack, je suis autonome, curieux et toujours sérieux.'>
     <link rel="stylesheet" href="./frameworks/bootstrap.css" />
     <link href='main.css' rel='stylesheet' />
     <title>Huang Julien - Developpeur FullStack JS</title>
@@ -46,8 +48,8 @@
             <!--background-->
             <div class='w-100 h-100 d-flex flex-row' id='header_bg'><!--full width/height-->
                 <div class='align-self-center mx-auto p-5c' id="header_name"><!--name-->
-                    <h1 class='text-center'>Huang Julien</h1>
-                    <h2 class="p-2">Developpeur FullStack</h2>
+                    <h1 class='text-center p-3'>Huang Julien</h1>
+                    <h2 class="p-2 header_animation">Developpeur FullStack</h2>
                 </div>
             </div>
             
@@ -95,6 +97,17 @@
                             <li class="list-group-item flex-fill">Château-Thierry</li>
                           </ul>
                     </div>
+                    <div class='container my-4'>
+                        <h4>Ce que j'aime</h3>
+                        <div class='row justify-content-between'>
+                            <div class='hobby_card rounded border border-primary p-0 col-3 mb-4 col-sm-2 col-md-2 mx-4 d-flex flex-column justify-content-between' v-for='hobby in hobbies'>
+                               <img class='hobby_card_img border-bottom border-light py-2' :src='hobby.img' :alt='hobby.alt' />
+                               <div class='hobby_card_description text-light text-center mb-2 '>
+                                   {{hobby.name}}
+                               </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section id='parcours' class='bg-dark pb-2'>
@@ -104,6 +117,11 @@
                         Parcours
                      </h3>
                     <div class='lign col align-self-center'></div>
+                </div>
+                <div class="container my-3">
+                    <p class='text-center text-light'>Après avoir obtenu mon baccalauréat scientifique, j'ai voulu exploré la voie de la langue étrangère ce qui m'a 
+                        permis de renforcer mon niveau en anglais et en chinois. Aujourd'hui, je souhaite faire de ma passion mon métier.
+                    </p>
                 </div>
                 <div class='container mt-4'>
                     <div class='accordion' id='diploma_accordion'>
@@ -190,7 +208,7 @@
                      </h3>
                     <div class='lign col align-self-center'></div>
                 </div>
-                <p class='mt-4 mb-4 text-light'>Voici mes principaux services mais n'hésitez pas à me contacter si vous avez une demande spécifique !</p>
+                <p class='mt-4 mb-4 text-light text-center'>Voici mes principaux services mais n'hésitez pas à me contacter si vous avez une demande spécifique !</p>
                 <div class='container mt-5 mx-auto'>
                     <div class='row justify-content-center'>
                         <template  v-for="service in services">
@@ -240,20 +258,26 @@
                     </template>
                 </div>
                 <div class='container mt-2'>
-                    <button class='w-100 openclassrooms_accordeon' data-toggle="collapse" aria-expanded="false" data-target='#openclassrooms'>
-                        <p>Projets effectués dans le cadre du parcours Développeur web de openclassrooms</p>
+                    <button class='w-100 openclassrooms_accordeon rounded-top d-flex align-items-center py-2' data-toggle="collapse" aria-expanded="false" data-target='#openclassrooms' id='openclassrooms-button'>
+                        <div class='col-2 col-md-1'>
+                            <img src='./img/portfolio/openclassrooms.png' alt='openclassrooms' class='w-100' />
+                        </div>
+                        <div class='col-8 col-md-10'>
+                            <p class='text-center mb-0'>Projets effectués dans le cadre du parcours Développeur web de openclassrooms</p>
+
+                        </div>
                     </button>
-                    <div class='container-fluid collapse mb-4 border border-dark' id='openclassrooms'>
+                    <div class='container-fluid collapse mb-4 pb-4 rounded-bottom ' id='openclassrooms'>
                         <div class='row'>
                             <template v-for='item in portfolio.OP'>
                                 <div class='col-12 col-md-4 mx-auto mt-5  '>
-                                    <div class='row col-11 mx-auto border rounded h-100 px-0 border-primary'>
+                                    <div class='row col-11 mx-auto  rounded h-100 px-0 border-oc'>
                                         <div class='col-5  p-0 col-md-12 mx-auto d-flex flex-row '>
                                             
-                                            <img :src='item.imgUrl' :alt='item.alt' class='rounded p-0 w-100 align-self-center position-relative'/>
-                                            <div class='p-0 m-0 w-100 h-100 mx-auto position-absolute cache_img d-flex align-items-center justify-content-center'>
-                                                <a :href='item.urlHost' class='text-center' target="_blank" >Github</a>
-                                            </div>
+                                            <img :src='item.imgUrl' :alt='item.alt' class='rounded p-0 w-100 align-self-center position-relative img_link'/>
+                                            <div class='position-absolute  w-100 h-100 cache_img'><a :href='item.urlHost' class='w-100 d-flex justify-content-center align-items-center h-100'>
+                                                GitHub
+                                            </a></div>
                                         </div>
                                         
                                         <div class='col-7 col-md-12 mx-auto'>

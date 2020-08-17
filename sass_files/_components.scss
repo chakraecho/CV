@@ -57,3 +57,19 @@
         
     }
 }
+
+.hobby_card{
+    background-color: $ux-midnight;
+    &_img{
+        height:3rem;
+    }
+    &_description{
+        
+    }
+
+}
+
+.border-oc{
+    border:1px solid #7451eb;
+
+}

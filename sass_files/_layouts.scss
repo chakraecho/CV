@@ -4,12 +4,22 @@ body{
 }
 header{
     height:100vh;
-    background-image: url('./img/header_background.jpg');
+    background-image: url('./img/header_background_large.webp');
+    background-size: cover;
 }
 
 #header{
     &_bg{
         background-color: $ux-blue;
+    }
+}
+
+#openclassrooms{
+    border:3px solid #7451eb;
+    border-top-width: 0px;
+    &-button{
+        border: 3px solid #7451eb;
+        color:#7451eb;
     }
 }
 
