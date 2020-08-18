@@ -20,7 +20,7 @@
         <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link" href="#index.html">Acceuil <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#accueil">Acceuil <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#a_propos">Profil</a>
@@ -43,7 +43,7 @@
             </ul>
         </div> 
     </nav>
-        <header>
+        <header id='accueil'>
             
             <!--background-->
             <div class='w-100 h-100 d-flex flex-row' id='header_bg'><!--full width/height-->
@@ -301,18 +301,24 @@
                 <div class="container">
                     <div class='row'>
                         <div class='col-12 col-md-6'>
-                            <form>
+                            <iframe name="votar" style="display:none;"></iframe>
+                            <form method="POST"  action='/mail.php' target='votar' name='sendMail' id='sendMail'>
                                 <div class='form-group'>
-                                    <label for='email'>
-                                        Votre mail : 
-                                    </label>
-                                    <input type='email' id='email' name='email' class='form-control' pattern='[a-zA-Z0-9._\-]+@[a-zA-Z0-9._\-]+\.[a-zA-Z]{2,10}'/>
                                     <label for='name'>Votre Nom et Prénom :</label>
                                     <input type='text' name='name' id='name' class='form-control' />
+                                    <label for='email'>
+                                        Email : 
+                                    </label>
+                                    <input type='email' id='email' name='email' class='form-control' pattern='[a-zA-Z0-9._\-]+@[a-zA-Z0-9._\-]+\.[a-zA-Z]{2,10}'/>
+                                    <label for='object'>Objet du message :</label>
+                                    <input type='text' name='object' id='object' class='form-control' />
                                     <label for='message'>Votre message :</label>
-                                    <textarea class="form-control" id="message" rows="4"></textarea>
+                                    <textarea class="form-control" id="message" name='message' rows="4"></textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Envoyer</button>
+                                <button type="submit" class="btn btn-primary" name='submitForm'  id='submitForm' >Envoyer</button>
+                                <div class='row' id='alert-mail'>
+                                    
+                                </div>
                             </form>
                             <div class="row justify-content-around mt-3 mb-5">
                                     <a class='col-2' href='mailto:me@j-huang.fr'>
@@ -347,3 +353,4 @@
     <script src='./main.js'></script>
 </body>
 </html>
+

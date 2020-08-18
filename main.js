@@ -265,3 +265,33 @@ const services = new Vue({
 		]
 	}	
 })
+
+function sendForm(e){
+	e.preventDefault();
+	const name = document.querySelector('#name').value;
+	const email = document.querySelector('#email').value;
+	const object = document.querySelector('#object').value;
+	const message = document.querySelector('#message').value;
+	console.log(email)
+	const sendMail = document.getElementById('sendMail')
+	let data = new FormData()
+	data.append('name', name)
+	data.append('object', object)
+	data.append('email', email)
+	data.append('message',message)
+	console.log(data)
+	fetch('/mail.php',{
+		methods:'POST',
+		body: data,
+		headers:{
+			"content-type":"application/x-www-form-urlencoded"
+		}
+	})
+	.then(()=>{
+		document.querySelector('#alert-mail').innerHTML = `<div class="alert alert-primary" role="alert">
+		message envoyé !
+	  </div>`
+	})
+	.catch((error)=> console.log(error))
+}
+

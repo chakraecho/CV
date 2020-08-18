@@ -96,6 +96,10 @@ header {
   font-family: rubik;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 nav {
   z-index: 30;
   height: 10vh;
