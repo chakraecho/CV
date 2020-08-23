@@ -193,37 +193,37 @@ const portfolio = new Vue({
 				name:'Gestionnaire de compte-rendu pour le club informatique de Polytech Lille',
 				role:'Dev Front',
 				url:'https://gitlab.com/ClubInfoPolytechLille/gestionnaire-de-comptes-rendus',
-				imgUrl:'./img/portfolio/GCR.png',
+				imgUrl:'./img/portfolio/GCR.webp',
 				alt:'page de connexion du GCR'
 			}],
 			OP:[{
 				name:'Intégration de maquette en CV responsive',
 				urlHost:'https://github.com/chakraecho/P2_Huang_Julien',
-				imgUrl:'./img/portfolio/projet_2_openclassrooms.png',
+				imgUrl:'./img/portfolio/projet_2_openclassrooms.webp',
 				alt:"capture d'écran du projet 2 de Openclassrooms",
 			},
 			{
 				name:'Intégration de maquette sur un site multi-page',
 				urlHost:'https://www.github.com/chakraecho/P3_Ohmyfood',
-				imgUrl:'./img/portfolio/projet_3_oh_my_food.png',
+				imgUrl:'./img/portfolio/projet_3_oh_my_food.webp',
 				alt:'capture d\'écran du projet 3 de Openclassrooms',
 			},
 			{
 				name:'Optimisation SEO et accessibilité d\'un site web',
 				urlHost:'https://www.github.com/chakraecho/P4_Huang_Julien/',
-				imgUrl:'./img/portfolio/projet_4_openclassrooms.png',
+				imgUrl:'./img/portfolio/projet_4_openclassrooms.webp',
 				alt:'capture d\'écran du projet 4 de Openclassrooms',
 			},
 			{
 				name:'Création d\'un MVP de site E-commerce',
 				urlHost:'https://github.com/chakraecho/P5_Orinobear',
-				imgUrl:'./img/portfolio/projet_5_openclassrooms.png',
+				imgUrl:'./img/portfolio/projet_5_openclassrooms.webp',
 				alt:'capture d\'écran du projet 5 de Openclassrooms',
 			},
 			{
 				name:'Création d\'une API sous NodeJS',
 				urlHost:'https://github.com/chakraecho/P6_OC_so_peckocko',
-				imgUrl:'./img/portfolio/projet_6_openclassrooms.png',
+				imgUrl:'./img/portfolio/projet_6_openclassrooms.webp',
 				alt:'capture d\'écran du projet 6 de Openclassrooms',
 			}
 

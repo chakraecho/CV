@@ -1,10 +1,12 @@
 @font-face {
   font-family: "heater";
   src: url("./assets/font/Heaters.otf");
+  font-display: swap;
 }
 @font-face {
   font-family: "rubik";
   src: url("./assets/font/Rubik.ttf");
+  font-display: swap;
 }
 body {
   max-width: 100%;
@@ -556,10 +558,12 @@ h3 {
 @font-face {
   font-family: "heater";
   src: url("./assets/font/Heaters.otf");
+  font-display: swap;
 }
 @font-face {
   font-family: "rubik";
   src: url("./assets/font/Rubik.ttf");
+  font-display: swap;
 }
 .timeline_block {
   display: flex;

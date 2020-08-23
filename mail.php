@@ -16,7 +16,7 @@
     }
  
     if(isset($_POST['submitForm'])){
-		echo 'salut';
 		send_mail();
+		echo json_encode()
     }
 ?>
