@@ -2,7 +2,7 @@
 
 .hexagon {
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-    background: url("img/profil/profil.jpg") no-repeat;
+    background: url("img/profil/profil.webp") no-repeat;
     background-size: cover;
     margin: 10px auto;
     height: 200px;
@@ -72,4 +72,33 @@
 .border-oc{
     border:1px solid #7451eb;
 
+}
+//perspective
+.clickable{
+    &-parent{
+        perspective:200px;
+    }
+    &-child{
+        transform: translateZ(10px);
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+        transition: all 400ms both;
+
+        &:active{
+            transform: translateZ(0px);
+        }
+    }
+}
+
+.hoverable{
+    &-parent{
+        perspective: 200px;
+    }
+    &-child{
+        transform:translateZ(0px);
+        box-shadow: 4px 4px 4px rgba(255, 255, 255, 0.25);
+        transition: all 400ms both;
+        &:hover{
+            transform:translateZ(5px);
+        }
+    }
 }

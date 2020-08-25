@@ -212,12 +212,12 @@
                 <div class='container mt-5 mx-auto'>
                     <div class='row justify-content-center'>
                         <template  v-for="service in services">
-                            <div class='col-6  col-sm-4 mb-4  col-md-3'>
-                                <div class='card p-0 h-100 col-11 col-sm-12 mx-auto '>
-                                    <div class="card-img-top d-flex flex-row justify-content-center">
+                            <div class='col-6 hoverable-parent  col-sm-4 mb-4  col-md-3'>
+                                <div class='p-0 hoverable-child h-100 col-11 col-sm-12 mx-auto d-flex flex-column'>
+                                    <div class='w-100 bg-light d-flex justify-content-center py-2'>
                                         <img loading="lazy" :src='service.imgUrl'  :alt='service.alt' class='w-50'/>
                                     </div>
-                                    <div class='card-body p-1'>
+                                    <div class='flex-fill py-4 bg-black px-2'>
                                         <h5 class='card-title text-center'>{{service.name}}</h4>
                                     </div>
                                 </div>
@@ -236,14 +236,14 @@
                      </h3>
                     <div class='lign col align-self-center'></div>
                 </div>
-                <div class='container'>
+                <div class='container clickable-parent'>
                     <template v-for='item in portfolio.main'>
-                        <div class='card mx-auto col-5 col-sm-4 col-md-3'>
+                        <div class='card clickable-child mx-auto col-5 col-sm-4 col-md-3'>
                             <div class='card-img-top'>
                                 <div class='row'>
                                     <!--wrapper !-->
                                     <img loading="lazy" :src='item.imgUrl' :alt='item.alt' class='w-100 position-relative img_link'/>
-                                    <div class='position-absolute  w-100 h-100 cache_img'><a :href='item.url' class='w-100 d-flex justify-content-center align-items-center h-100'>
+                                    <div class='position-absolute  w-100 h-100 cache_img'><a target="_blank" :href='item.url' class='w-100 d-flex justify-content-center align-items-center h-100'>
                                         GitLab
                                     </a></div>
                                 </div>
@@ -257,10 +257,10 @@
                         </div>
                     </template>
                 </div>
-                <div class='container mt-2'>
+                <div class='container mt-4'>
                     <button class='w-100 openclassrooms_accordeon rounded-top d-flex align-items-center py-2' data-toggle="collapse" aria-expanded="false" data-target='#openclassrooms' id='openclassrooms-button'>
                         <div class='col-2 col-md-1'>
-                            <img loading="lazy" src='./img/portfolio/openclassrooms.png' alt='openclassrooms' class='w-100' />
+                            <img loading="lazy" src='./img/portfolio/openclassrooms.webp' alt='openclassrooms' class='w-100' />
                         </div>
                         <div class='col-8 col-md-10'>
                             <p class='text-center mb-0'>Projets effectués dans le cadre du parcours Développeur web de openclassrooms</p>
@@ -275,7 +275,7 @@
                                         <div class='col-5  p-0 col-md-12 mx-auto d-flex flex-row '>
                                             
                                             <img  loading="lazy" :src='item.imgUrl' :alt='item.alt' class='rounded p-0 w-100 align-self-center position-relative img_link'/>
-                                            <div class='position-absolute  w-100 h-100 cache_img'><a :href='item.urlHost' class='w-100 d-flex justify-content-center align-items-center h-100'>
+                                            <div class='position-absolute  w-100 h-100 cache_img'><a target="_blank" :href='item.urlHost' class='w-100 d-flex justify-content-center align-items-center h-100'>
                                                 GitHub
                                             </a></div>
                                         </div>

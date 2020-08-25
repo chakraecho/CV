@@ -32,9 +32,18 @@ header {
   color: #7451eb;
 }
 
+.flex-fill {
+  flex: 1;
+}
+
+.bg-black {
+  background-color: black;
+  color: white;
+}
+
 .hexagon {
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-  background: url("img/profil/profil.jpg") no-repeat;
+  background: url("img/profil/profil.webp") no-repeat;
   background-size: cover;
   margin: 10px auto;
   height: 200px;
@@ -90,6 +99,30 @@ header {
 }
 .border-oc {
   border: 1px solid #7451eb;
+}
+
+.clickable-parent {
+  perspective: 200px;
+}
+.clickable-child {
+  transform: translateZ(10px);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: all 400ms both;
+}
+.clickable-child:active {
+  transform: translateZ(0px);
+}
+
+.hoverable-parent {
+  perspective: 200px;
+}
+.hoverable-child {
+  transform: translateZ(0px);
+  box-shadow: 4px 4px 4px rgba(255, 255, 255, 0.25);
+  transition: all 400ms both;
+}
+.hoverable-child:hover {
+  transform: translateZ(5px);
 }
 
 * {
