@@ -274,24 +274,26 @@ function sendForm(e){
 	const message = document.querySelector('#message').value;
 	console.log(email)
 	const sendMail = document.getElementById('sendMail')
-	let data = new FormData()
+	let data = new URLSearchParams()
 	data.append('name', name)
 	data.append('object', object)
 	data.append('email', email)
 	data.append('message',message)
 	console.log(data)
 	fetch('/mail.php',{
-		methods:'POST',
+		method:'POST',
 		body: data,
 		headers:{
 			"content-type":"application/x-www-form-urlencoded"
 		}
 	})
-	.then(()=>{
-		document.querySelector('#alert-mail').innerHTML = `<div class="alert alert-primary" role="alert">
-		message envoyé !
-	  </div>`
+	.then(response => {
+		console.log(response)
+		response.text()})
+	.then(result => {
+		console.log(result)
+		document.getElementById('alert-mail').innerHTML = result
 	})
-	.catch((error)=> console.log(error))
+	.catch(error => console.log('error', error));
 }
 

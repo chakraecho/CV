@@ -1,4 +1,5 @@
 <?php
+	header('Access-Control-Allow-Origin: https://j-huang.fr');
     function send_mail(){
 		$to = "me@j-huang.fr";
 		$subject = $_POST['object'];
@@ -13,10 +14,11 @@
 		$headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
 
 		mail($to, $subject, $message, $headers);
+		echo '<div class="alert alert-success" role="alert">message envoyé !</div>';
     }
  
     if(isset($_POST['submitForm'])){
 		send_mail();
-		echo json_encode()
+		
     }
 ?>
